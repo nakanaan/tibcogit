@@ -1,0 +1,11 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [{
+        "location": "Service Descriptors/com.tibco.orange.poc.crmpoller.account-crm-account-crm.json",
+        "type": "generated"
+    }]
+}

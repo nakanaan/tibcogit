@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dynamiccrmrestconnection="http://ns.tibco.com/bw/palette/dynamicscrmrestconnection" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_SV40UfGhEemCLf-0prJOiA" name="com.tibco.orange.poc.crmpoller.On-Premise__DynamicsCRMRestConnection" type="dynamiccrmrestconnection:DynamicscrmRest">
+  <jndi:configuration xsi:type="dynamiccrmrestconnection:DynamicCRMRestConnection" xmi:id="_SV40UvGhEemCLf-0prJOiA" serverType="On-Premises" authType="NTLM" serviceRootURL="http://wasp-win16-z240/D365-V902/main.aspx" username="wasp-hyd0\Administrator" password="#!W7scBK3qsCPFUVbBlGSI31l4SZbK9FxKrtZukV4KgKs=" timeout="1800" proxyAuthType="Basic"/>
+</jndi:namedResource>
