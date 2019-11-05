@@ -699,7 +699,7 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    xsi:type="notation:Bounds" y="34"/>
+                                    xsi:type="notation:Bounds" y="43"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
                                     <styles xsi:type="notation:FilteringStyle"/>
@@ -767,8 +767,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.1/@activity/@activity/@activities.2"/>
 
                                     <layoutConstraint
-                                    x="245"
-                                    xsi:type="notation:Bounds" y="10"/>
+                                    x="230"
+                                    xsi:type="notation:Bounds" y="17"/>
                                     </children>
 
                                     <children type="4002">
@@ -821,8 +821,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.1/@activity/@activity/@activities.3"/>
 
                                     <layoutConstraint
-                                    x="26"
-                                    xsi:type="notation:Bounds" y="44"/>
+                                    x="30"
+                                    xsi:type="notation:Bounds" y="29"/>
                                     </children>
 
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -848,7 +848,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.1/@activity/@activity"/>
 
                                     <layoutConstraint
-                                    height="129"
+                                    height="128"
                                     width="381" xsi:type="notation:Bounds"/>
                                     </children>
 
