@@ -29,7 +29,7 @@
     <appSpaceDesc></appSpaceDesc>
     <redeploy>true</redeploy>
     <tibco.Home></tibco.Home>
-    <externalProfile>true</externalProfile>
+    <externalProfile>false</externalProfile>
     <keystorePassword></keystorePassword>
     <backupLocation></backupLocation>
     <agentPassword></agentPassword>
