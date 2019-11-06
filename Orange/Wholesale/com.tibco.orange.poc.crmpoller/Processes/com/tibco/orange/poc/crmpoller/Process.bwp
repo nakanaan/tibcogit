@@ -1767,9 +1767,7 @@
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
-                    eventTimeout="60" name="Timer"
-                    tibex:xpdlId="bf07106b-0791-4da1-a85b-3125f798b798"
-                    variable="Timer" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    eventTimeout="60" name="Timer" variable="Timer">
                     <bpws:sources>
                         <bpws:source linkName="TimerToQueryRESTEntities"/>
                     </bpws:sources>
@@ -1798,9 +1796,7 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension
                     inputVariable="RetrieveRESTEntity-input"
-                    name="RetrieveRESTEntity"
-                    outputVariable="RetrieveRESTEntity"
-                    tibex:xpdlId="4ca55292-0320-4b49-9004-4dbc4f221492" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    name="RetrieveRESTEntity" outputVariable="RetrieveRESTEntity">
                     <bpws:targets>
                         <bpws:target linkName="QueryRESTEntitiesToRetrieveRESTEntity"/>
                     </bpws:targets>
@@ -4698,9 +4694,7 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension
                     inputVariable="QueryRESTEntities-input"
-                    name="QueryRESTEntities"
-                    outputVariable="QueryRESTEntities"
-                    tibex:xpdlId="04856cb2-3b94-4a1b-a129-4a7063d2015c" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    name="QueryRESTEntities" outputVariable="QueryRESTEntities">
                     <bpws:targets>
                         <bpws:target linkName="TimerToQueryRESTEntities"/>
                     </bpws:targets>
@@ -8736,9 +8730,7 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension
                     inputVariable="CreateRESTEntity-input"
-                    name="CreateRESTEntity"
-                    outputVariable="CreateRESTEntity"
-                    tibex:xpdlId="78115dd7-48b4-4b03-a213-6c8eb96d939c" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    name="CreateRESTEntity" outputVariable="CreateRESTEntity">
                     <bpws:targets>
                         <bpws:target linkName="RetrieveRESTEntityToCreateRESTEntity"/>
                     </bpws:targets>
@@ -8820,9 +8812,7 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension
                     inputVariable="SalesforceQueryAll-input"
-                    name="SalesforceQueryAll"
-                    outputVariable="SalesforceQueryAll"
-                    tibex:xpdlId="291c09e5-bc09-4030-aad5-4dc2b984a811" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    name="SalesforceQueryAll" outputVariable="SalesforceQueryAll">
                     <bpws:targets>
                         <bpws:target linkName="SalesforceGetSessionToSalesforceQueryAll"/>
                     </bpws:targets>
@@ -8857,9 +8847,7 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension
                     inputVariable="SalesforceGetSession-input"
-                    name="SalesforceGetSession"
-                    outputVariable="SalesforceGetSession"
-                    tibex:xpdlId="086f5038-2232-446f-afed-ab8322c0cb83" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    name="SalesforceGetSession" outputVariable="SalesforceGetSession">
                     <bpws:targets>
                         <bpws:target linkName="CreateRESTEntityToSalesforceGetSession"/>
                     </bpws:targets>

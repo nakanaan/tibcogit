@@ -889,9 +889,7 @@
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
-                    eventTimeout="60" name="Timer"
-                    tibex:xpdlId="1a95e2bb-8a44-4481-8cab-7a7a0f604371"
-                    variable="Timer" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    eventTimeout="60" name="Timer" variable="Timer">
                     <bpws:sources>
                         <bpws:source linkName="TimerToSalesforceGetSession"/>
                     </bpws:sources>
@@ -920,9 +918,7 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension
                     inputVariable="SalesforceQueryAll-input"
-                    name="SalesforceQueryAll"
-                    outputVariable="SalesforceQueryAll"
-                    tibex:xpdlId="5ad67add-e2af-436e-85c0-cdef67a31720" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    name="SalesforceQueryAll" outputVariable="SalesforceQueryAll">
                     <bpws:targets>
                         <bpws:target linkName="SalesforceGetSessionToSalesforceQueryAll"/>
                     </bpws:targets>
@@ -958,9 +954,7 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension
                     inputVariable="SalesforceGetSession-input"
-                    name="SalesforceGetSession"
-                    outputVariable="SalesforceGetSession"
-                    tibex:xpdlId="3751fc44-da09-4829-9ec6-0f05ad29c693" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    name="SalesforceGetSession" outputVariable="SalesforceGetSession">
                     <bpws:targets>
                         <bpws:target linkName="TimerToSalesforceGetSession"/>
                     </bpws:targets>
@@ -993,8 +987,7 @@
             </bpws:extensionActivity>
             <bpws:extensionActivity>
                 <tibex:activityExtension inputVariable="Mapper-input"
-                    name="Mapper" outputVariable="Mapper"
-                    tibex:xpdlId="ecd0f848-bd22-45c2-b9ad-13b1de019b0c" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    name="Mapper" outputVariable="Mapper">
                     <bpws:targets>
                         <bpws:target linkName="SalesforceQueryAllToMapper"/>
                     </bpws:targets>

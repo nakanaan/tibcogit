@@ -1,0 +1,20 @@
+Manifest-Version: 1.0.0.201911061737
+Bundle-SymbolicName: poc.orange.crm.module
+Bundle-ManifestVersion: 2
+TIBCO-BW-Edition: bwe
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tib
+ co.bw.palette; filter:="(name=bw.dynamicscrmrest)",com.tibco.bw.share
+ dresource.model; filter:="(name=bw.dynamicscrmrest)",com.tibco.bw.sha
+ redresource.model; filter:="(name=bw.httpconnector)",com.tibco.bw.sha
+ redresource.model; filter:="(name=bw.salesforceconnection)",com.tibco
+ .bw.binding.model; filter:="(name=bw.rest)"
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-Version: 6.5.1 HF1 V34 2019-05-22
+Bundle-Name: Poc Orange Crm Module
+Bundle-Version: 1.0.0.201911061737
+Bundle-ClassPath: .
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+
