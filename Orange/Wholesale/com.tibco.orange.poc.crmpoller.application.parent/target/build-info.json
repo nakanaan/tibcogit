@@ -1,7 +1,7 @@
 {
   "version" : "1.0.1",
   "name" : "Orange-Win-CRMPOLLER",
-  "number" : "4",
+  "number" : "5",
   "type" : "MAVEN",
   "buildAgent" : {
     "name" : "Maven",
@@ -11,11 +11,11 @@
     "name" : "Jenkins",
     "version" : "2.190.1"
   },
-  "started" : "2019-11-05T11:43:38.981+0100",
-  "durationMillis" : 7992,
+  "started" : "2019-11-06T16:28:24.609+0100",
+  "durationMillis" : 8228,
   "principal" : "nakanaan",
   "artifactoryPluginVersion" : "3.4.1",
-  "url" : "http://localhost:8080/job/Orange-Win-CRMPOLLER/4/",
+  "url" : "http://localhost:8080/job/Orange-Win-CRMPOLLER/5/",
   "vcs" : [ {
     "revision" : "a532a9ae49eea7c182d587357c748473761c0326",
     "url" : "https://github.com/nkanaan/tibcogit.git"
@@ -26,8 +26,8 @@
     "runChecks" : false,
     "includePublishedArtifacts" : false,
     "autoDiscover" : false,
-    "scopesList" : "",
-    "licenseViolationsRecipientsList" : ""
+    "licenseViolationsRecipientsList" : "",
+    "scopesList" : ""
   },
   "modules" : [ {
     "properties" : { },
@@ -74,8 +74,8 @@
     "id" : "com.tibco.bw:com.tibco.orange.poc.crmpoller.application:1.0.0-SNAPSHOT",
     "artifacts" : [ {
       "type" : "bwear",
-      "sha1" : "d94046fd4f136922a79ee73808f9526d56473eb9",
-      "md5" : "dce4a5e422ea0443bc9eac55b573b0ac",
+      "sha1" : "fc7fcf1ffbc1a5cb1cc2ab0410f0e44c1097f16d",
+      "md5" : "627cde1235ef7543d8231428ea4dac6a",
       "name" : "com.tibco.orange.poc.crmpoller.application-1.0.0-SNAPSHOT.ear"
     }, {
       "type" : "pom",
@@ -88,8 +88,8 @@
     "id" : "com.tibco.bw:com.tibco.orange.poc.crmpoller:1.0.0-SNAPSHOT",
     "artifacts" : [ {
       "type" : "bwmodule-jar",
-      "sha1" : "088189e7dbde6cd0285b6709b6cf579b30ecdf78",
-      "md5" : "77c301b22e003081e6cf601a57ea1178",
+      "sha1" : "baffc0daae6fba915a953025be3a173a5d30f130",
+      "md5" : "5fcfba137472395ba2ebf3bbdf1ce531",
       "name" : "com.tibco.orange.poc.crmpoller-1.0.0-SNAPSHOT.jar"
     }, {
       "type" : "pom",
