@@ -1,0 +1,5 @@
+{"records": [{
+    "jsonSchemaLocation": "/com.tibco.orange.poc.crmpoller/Service Descriptors/com.tibco.orange.poc.crmpoller.account-crm-account-crm.json",
+    "conversionType": "linked",
+    "xsdSchemaTargetNamespace": "/T1572961295166Converted/JsonSchema"
+}]}

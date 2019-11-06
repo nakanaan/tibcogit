@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Q1="http://tns.tibco.com/bw/REST" xmlns:tns="/T1572961295166Converted/JsonSchema" elementFormDefault="qualified" targetNamespace="/T1572961295166Converted/JsonSchema">
+  <complexType name="account-crmArray">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" name="account-crm" type="Q1:account-crm"/>
+    </sequence>
+  </complexType>
+  <element name="account-crmArray" type="tns:account-crmArray"/>
+</schema>

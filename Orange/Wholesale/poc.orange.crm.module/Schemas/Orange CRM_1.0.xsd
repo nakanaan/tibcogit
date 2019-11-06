@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="/T1572969429706Converted/JsonSchema" xmlns:tns="/T1572969429706Converted/JsonSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="getAccountOutput" type="tns:getAccountOutput"/>
+    <xs:complexType name="getAccountOutput">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="info" type="xs:string"/>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="accounts" type="tns:Obj-Account"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Obj-Account" type="tns:Obj-Account"/>
+    <xs:complexType name="Obj-Account">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="name" type="xs:string"/>
+            <xs:element minOccurs="0" name="id" type="xs:string"/>
+            <xs:element minOccurs="0" name="status" type="xs:string"/>
+            <xs:element minOccurs="0" name="address" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Obj-Info" type="tns:Obj-Info"/>
+    <xs:complexType name="Obj-Info">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="info" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Obj-Account-Create" type="tns:Obj-Account-Create"/>
+    <xs:complexType name="Obj-Account-Create">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="name" type="xs:string"/>
+            <xs:element minOccurs="0" name="status" type="xs:string"/>
+            <xs:element minOccurs="0" name="address" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Obj-Error" type="tns:Obj-Error"/>
+    <xs:complexType name="Obj-Error">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="error-desc" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

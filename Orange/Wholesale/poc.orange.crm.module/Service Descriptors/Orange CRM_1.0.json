@@ -1,0 +1,221 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Orange CRM",
+    "x-lastModified": "Nov 05, 2019 07:21AM PST",
+    "description": "Orange Wholesale API for Dynamics CRM"
+  },
+  "paths": {
+    "/account": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/Obj-Account"
+            },
+            "examples": {
+              "application/json": {
+                "name": "account-crm",
+                "id": "XyZeRTUBgf54fh",
+                "status": "active",
+                "address": "1 rue de france, 75001 Paris"
+              }
+            }
+          },
+          "204": {
+            "description": "Account Not Found",
+            "schema": {
+              "$ref": "#/definitions/Obj-Info"
+            },
+            "examples": {
+              "application/json": {
+                "info": "Account not found"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "name",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getAccount",
+        "summary": "getAccount"
+      },
+      "post": {
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/Obj-Account"
+            }
+          },
+          "500": {
+            "description": "Internal Error",
+            "schema": {
+              "$ref": "#/definitions/Obj-Error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Account Object",
+            "schema": {
+              "$ref": "#/definitions/Obj-Account"
+            }
+          }
+        ],
+        "operationId": "postAccount",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "summary": "Update Account"
+      },
+      "put": {
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/Obj-Account"
+            }
+          },
+          "500": {
+            "description": "Internal Error",
+            "schema": {
+              "$ref": "#/definitions/Obj-Error"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Obj-Account-Create"
+            }
+          }
+        ],
+        "operationId": "putAccount",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "summary": "CreateAccount"
+      }
+    }
+  },
+  "definitions": {
+    "getAccountOutput": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "default": "account-crm"
+        },
+        "id": {
+          "type": "string",
+          "default": "XyZeRTUBgf54fh"
+        },
+        "status": {
+          "type": "string",
+          "default": "active"
+        },
+        "address": {
+          "type": "string",
+          "default": "1 rue de france, 75001 Paris"
+        }
+      }
+    },
+    "GiveNewSchemaNameHere": {
+      "type": "object",
+      "properties": {
+        "info": {
+          "type": "string",
+          "default": "Account not found"
+        }
+      }
+    },
+    "Obj-Account": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "default": "account-crm"
+        },
+        "id": {
+          "type": "string",
+          "default": "XyZeRTUBgf54fh"
+        },
+        "status": {
+          "type": "string",
+          "default": "active"
+        },
+        "address": {
+          "type": "string",
+          "default": "1 rue de france, 75001 Paris"
+        }
+      }
+    },
+    "Obj-Error": {
+      "type": "object",
+      "properties": {
+        "error-desc": {
+          "type": "string",
+          "default": "Error"
+        }
+      }
+    },
+    "Obj-Account-Create": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "default": "account-crm"
+        },
+        "status": {
+          "type": "string",
+          "default": "active"
+        },
+        "address": {
+          "type": "string",
+          "default": "1 rue de france, 75001 Paris"
+        }
+      }
+    },
+    "Obj-Info": {
+      "type": "object",
+      "properties": {
+        "info": {
+          "type": "string",
+          "default": "Account not found"
+        }
+      }
+    }
+  }
+}

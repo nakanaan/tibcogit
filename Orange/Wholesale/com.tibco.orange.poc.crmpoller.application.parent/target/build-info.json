@@ -1,0 +1,116 @@
+{
+  "version" : "1.0.1",
+  "name" : "Orange-Win-CRMPOLLER",
+  "number" : "4",
+  "type" : "MAVEN",
+  "buildAgent" : {
+    "name" : "Maven",
+    "version" : "3.6.2"
+  },
+  "agent" : {
+    "name" : "Jenkins",
+    "version" : "2.190.1"
+  },
+  "started" : "2019-11-05T11:43:38.981+0100",
+  "durationMillis" : 7992,
+  "principal" : "nakanaan",
+  "artifactoryPluginVersion" : "3.4.1",
+  "url" : "http://localhost:8080/job/Orange-Win-CRMPOLLER/4/",
+  "vcs" : [ {
+    "revision" : "a532a9ae49eea7c182d587357c748473761c0326",
+    "url" : "https://github.com/nkanaan/tibcogit.git"
+  } ],
+  "vcsRevision" : "a532a9ae49eea7c182d587357c748473761c0326",
+  "vcsUrl" : "https://github.com/nkanaan/tibcogit.git",
+  "licenseControl" : {
+    "runChecks" : false,
+    "includePublishedArtifacts" : false,
+    "autoDiscover" : false,
+    "scopesList" : "",
+    "licenseViolationsRecipientsList" : ""
+  },
+  "modules" : [ {
+    "properties" : { },
+    "id" : "com.tibco.bw:com.tibco.orange.poc.crmpoller.application.parent:1.0.0-SNAPSHOT",
+    "artifacts" : [ {
+      "type" : "pom",
+      "sha1" : "69d659813b0b04adb14f2e1d5bdf79bccdbadee9",
+      "md5" : "eaa339dc4c036d28e35a10be66ed7511",
+      "name" : "com.tibco.orange.poc.crmpoller.application.parent-1.0.0-SNAPSHOT.pom"
+    } ]
+  }, {
+    "properties" : {
+      "externalProfileLoc" : "",
+      "appSpace" : "Space-Orange",
+      "keystorePath" : "",
+      "profile" : "default.substvar",
+      "backup" : "false",
+      "truststorePath" : "",
+      "domainDesc" : "",
+      "bw.Home" : "",
+      "agentPort" : "8079",
+      "truststorePassword" : "",
+      "agentAuth" : "",
+      "agentHost" : "localhost",
+      "httpPort" : "8060",
+      "appNode" : "Node-Wholesale",
+      "osgiPort" : "",
+      "appSpaceDesc" : "",
+      "redeploy" : "true",
+      "tibco.Home" : "",
+      "externalProfile" : "false",
+      "keystorePassword" : "",
+      "agentPassword" : "",
+      "backupLocation" : "",
+      "skipTests" : "false",
+      "project.type" : "AppSpace",
+      "appNodeDesc" : "",
+      "failIfNoTests" : "false",
+      "agentSSL" : "false",
+      "agentUsername" : "",
+      "deployToAdmin" : "true",
+      "domain" : "myDomain"
+    },
+    "id" : "com.tibco.bw:com.tibco.orange.poc.crmpoller.application:1.0.0-SNAPSHOT",
+    "artifacts" : [ {
+      "type" : "bwear",
+      "sha1" : "d94046fd4f136922a79ee73808f9526d56473eb9",
+      "md5" : "dce4a5e422ea0443bc9eac55b573b0ac",
+      "name" : "com.tibco.orange.poc.crmpoller.application-1.0.0-SNAPSHOT.ear"
+    }, {
+      "type" : "pom",
+      "sha1" : "567582ef06e26b2dfaef30a27c3fe3a78d99f33a",
+      "md5" : "75c5d8c697ccbc92c24acd0224842fbe",
+      "name" : "com.tibco.orange.poc.crmpoller.application-1.0.0-SNAPSHOT.pom"
+    } ]
+  }, {
+    "properties" : { },
+    "id" : "com.tibco.bw:com.tibco.orange.poc.crmpoller:1.0.0-SNAPSHOT",
+    "artifacts" : [ {
+      "type" : "bwmodule-jar",
+      "sha1" : "088189e7dbde6cd0285b6709b6cf579b30ecdf78",
+      "md5" : "77c301b22e003081e6cf601a57ea1178",
+      "name" : "com.tibco.orange.poc.crmpoller-1.0.0-SNAPSHOT.jar"
+    }, {
+      "type" : "pom",
+      "sha1" : "5543d01500c5f2be672ad297ec53b6c7df7fb2e6",
+      "md5" : "4ce1a17833a49ff206b9122b62eb15f4",
+      "name" : "com.tibco.orange.poc.crmpoller-1.0.0-SNAPSHOT.pom"
+    } ],
+    "dependencies" : [ {
+      "type" : "jar",
+      "sha1" : "d1bf33fabf54613a1b4a57603763c3bd91386aac",
+      "md5" : "9e022e4b854d8d74eaeab6e49aaa37b4",
+      "id" : "com.tibco.plugins:com.tibco.bw.palette.shared:6.1.100",
+      "scopes" : [ "provided" ]
+    } ]
+  } ],
+  "governance" : {
+    "blackDuckProperties" : {
+      "runChecks" : false,
+      "includePublishedArtifacts" : false,
+      "autoCreateMissingComponentRequests" : false,
+      "autoDiscardStaleComponentRequests" : false
+    }
+  }
+}

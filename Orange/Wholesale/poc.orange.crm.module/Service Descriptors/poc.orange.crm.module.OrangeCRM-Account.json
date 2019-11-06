@@ -1,0 +1,190 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/account" : {
+      "post" : {
+        "summary" : "Update Account",
+        "description" : "",
+        "operationId" : "postAccount",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Obj-Account"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Obj-Account to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Obj-Account"
+            }
+          },
+          "500" : {
+            "description" : "Internal Error",
+            "schema" : {
+              "$ref" : "#/definitions/Obj-Error"
+            }
+          }
+        }
+      },
+      "get" : {
+        "summary" : "getAccount",
+        "description" : "",
+        "operationId" : "getAccount",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "name",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a getAccountOutput to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/getAccountOutput"
+            }
+          },
+          "500" : {
+            "description" : "Internal Error",
+            "schema" : {
+              "type" : "string"
+            }
+          },
+          "204" : {
+            "description" : "Account Not Found",
+            "schema" : {
+              "$ref" : "#/definitions/Obj-Info"
+            }
+          }
+        }
+      },
+      "put" : {
+        "summary" : "CreateAccount",
+        "description" : "",
+        "operationId" : "putAccount",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Obj-Account-Create"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Obj-Account to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Obj-Account"
+            }
+          },
+          "500" : {
+            "description" : "Internal Error",
+            "schema" : {
+              "$ref" : "#/definitions/Obj-Error"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Obj-Account" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        },
+        "address" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Obj-Error" : {
+      "type" : "object",
+      "properties" : {
+        "error-desc" : {
+          "type" : "string"
+        }
+      }
+    },
+    "getAccountOutput" : {
+      "type" : "object",
+      "properties" : {
+        "info" : {
+          "type" : "string"
+        },
+        "accounts" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/accounts",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "Obj-Info" : {
+      "type" : "object",
+      "properties" : {
+        "info" : {
+          "type" : "string"
+        }
+      }
+    },
+    "accounts" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        },
+        "address" : {
+          "type" : "string"
+        }
+      }
+    },
+    "Obj-Account-Create" : {
+      "type" : "object",
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "status" : {
+          "type" : "string"
+        },
+        "address" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "records": [{
+        "name": "EU Cloud",
+        "items": [{
+            "localTimestamp": 1572969416216,
+            "localURI": "/poc.orange.crm.module/Service Descriptors/Orange CRM_1.0.json",
+            "disabled": false,
+            "remoteTimestamp": 1572964513000,
+            "localHash": "745734a8b92b4fbdb4eca21716dab737e6e9ebe8",
+            "remoteId": "293",
+            "remoteHash": "745734a8b92b4fbdb4eca21716dab737e6e9ebe8"
+        }],
+        "url": "https://eu.integration.cloud.tibco.com:443"
+    }],
+    "resources": [{
+        "location": "Service Descriptors/poc.orange.crm.module.OrangeCRM-Account.json",
+        "type": "generated"
+    }]
+}

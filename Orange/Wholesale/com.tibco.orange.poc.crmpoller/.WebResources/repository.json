@@ -1,8 +1,8 @@
 {
     "records": [{
-        "name": "Cloud",
+        "name": "EU Cloud",
         "items": [],
-        "url": "https://integration.cloud.tibco.com:443"
+        "url": "https://eu.integration.cloud.tibco.com:443"
     }],
     "resources": [{
         "location": "Service Descriptors/com.tibco.orange.poc.crmpoller.account-crm-account-crm.json",

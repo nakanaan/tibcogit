@@ -1,0 +1,23 @@
+Manifest-Version: 1.0.0.201911051143
+Bundle-SymbolicName: com.tibco.orange.poc.crmpoller
+Bundle-ManifestVersion: 2
+TIBCO-BW-Edition: bwe
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tib
+ co.bw.palette; filter:="(name=bw.generalactivities)",com.tibco.bw.pal
+ ette; filter:="(name=bw.dynamicscrmrest)",com.tibco.bw.palette; filte
+ r:="(name=bw.salesforce)",com.tibco.bw.sharedresource.model; filter:=
+ "(name=bw.dynamicscrmrest)",com.tibco.bw.sharedresource.model; filter
+ :="(name=bw.httpclient)",com.tibco.bw.sharedresource.model; filter:="
+ (name=bw.httpconnector)",com.tibco.bw.sharedresource.model; filter:="
+ (name=bw.salesforceconnection)",com.tibco.bw.binding.model; filter:="
+ (name=bw.rest)",com.tibco.bw.binding.model; filter:="(name=bw.soap)"
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-Version: 6.5.1 HF1 V34 2019-05-22
+Bundle-Name: Com Tibco Orange Poc Crmpoller Module
+Bundle-Version: 1.0.0.201911051143
+Bundle-ClassPath: .
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+

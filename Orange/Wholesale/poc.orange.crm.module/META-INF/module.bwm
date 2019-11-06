@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:JsonSchema="/T1572969429706Converted/JsonSchema" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_1s5HIP_kEemLfOmAitzy0w" targetNamespace="http://tns.tibco.com/bw/composite/poc.orange.crm.module" name="poc.orange.crm.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_7MIXAv_kEemLfOmAitzy0w" name="account" promote="ComponentProcess/account">
+    <sca:interface.wsdl xmi:id="_7MSIAv_kEemLfOmAitzy0w" interface="http://xmlns.example.com/20191105165633PLT#wsdl.interface(account)"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_7MSIA__kEemLfOmAitzy0w" name="RestService" path="/account" docBasePath="http://localhost:7777/poc.orange.crm.module" docResourcePath="Account" basePath="/" connector="poc.orange.crm.module.OrangeCRM" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/Orange CRM_1.0.json">
+      <operation xmi:id="_7MSIBf_kEemLfOmAitzy0w" operationName="post" nickname="postAccount" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <responseStatus xmi:id="_7M394P_kEemLfOmAitzy0w" statusCode="500" reasonPhrase="Internal Error" elementQName="JsonSchema:Obj-Error"/>
+        <clientFormat>json</clientFormat>
+        <clientFormat>xml</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+        <clientRequestFormat>xml</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_7MbR8P_kEemLfOmAitzy0w" operationName="get" nickname="getAccount" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_7M395v_kEemLfOmAitzy0w">
+          <parameterMapping xmi:id="_7M395__kEemLfOmAitzy0w" parameterName="name" parameterType="Query" dataType="string" description=""/>
+        </parameters>
+        <responseStatus xmi:id="_7M394v_kEemLfOmAitzy0w" statusCode="204" reasonPhrase="Account Not Found" elementQName="JsonSchema:Obj-Info"/>
+        <responseStatus xmi:id="_7M394__kEemLfOmAitzy0w" statusCode="500" reasonPhrase="Internal Error" dataType="string"/>
+        <clientFormat>json</clientFormat>
+        <clientFormat>xml</clientFormat>
+      </operation>
+      <operation xmi:id="_7MbR8f_kEemLfOmAitzy0w" operationName="put" nickname="putAccount" httpMethod="PUT" responseStyle="element" requestStyle="element">
+        <responseStatus xmi:id="_7M395P_kEemLfOmAitzy0w" statusCode="500" reasonPhrase="Internal Error" elementQName="JsonSchema:Obj-Error"/>
+        <clientFormat>json</clientFormat>
+        <clientFormat>xml</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+        <clientRequestFormat>xml</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_7M395f_kEemLfOmAitzy0w"/>
+      <import xmi:id="_7M394f_kEemLfOmAitzy0w" importType="http://www.w3.org/2001/XMLSchema" namespace="/T1572969429706Converted/JsonSchema"/>
+      <advancedConfig xmi:id="_7MSIBP_kEemLfOmAitzy0w" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_7MbR8v_kEemLfOmAitzy0w" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_11QY8P_kEemLfOmAitzy0w" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_11QY8f_kEemLfOmAitzy0w" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_11Zi4P_kEemLfOmAitzy0w" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_11Zi4f_kEemLfOmAitzy0w" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_11jT4P_kEemLfOmAitzy0w" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_11jT4f_kEemLfOmAitzy0w" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_11tE4P_kEemLfOmAitzy0w" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_11tE4f_kEemLfOmAitzy0w" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_112O0P_kEemLfOmAitzy0w" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8PwsEACFEeqLfOmAitzy0w" name="APP.ORANGECRM.PORT" type="XMLSchema:int" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_1wd_kP_kEemLfOmAitzy0w" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_1wd_kf_kEemLfOmAitzy0w" processName="poc.orange.crm.module.OrangeCRM"/>
+    <sca:service xmi:id="_7MIXAP_kEemLfOmAitzy0w" name="account">
+      <sca:interface.wsdl xmi:id="_7MIXAf_kEemLfOmAitzy0w" interface="http://xmlns.example.com/20191105165633PLT#wsdl.interface(account)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
