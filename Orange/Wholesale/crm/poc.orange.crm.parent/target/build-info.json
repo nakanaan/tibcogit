@@ -1,7 +1,7 @@
 {
   "version" : "1.0.1",
   "name" : "Orang-CRM",
-  "number" : "9",
+  "number" : "10",
   "type" : "MAVEN",
   "buildAgent" : {
     "name" : "Maven",
@@ -11,12 +11,17 @@
     "name" : "Jenkins",
     "version" : "2.190.1"
   },
-  "started" : "2019-11-06T17:37:21.268+0100",
-  "durationMillis" : 6237,
+  "started" : "2019-11-06T18:14:11.043+0100",
+  "durationMillis" : 6180,
   "principal" : "nakanaan",
   "artifactoryPluginVersion" : "3.4.1",
-  "url" : "http://localhost:8080/job/Orang-CRM/9/",
-  "vcs" : [ ],
+  "url" : "http://localhost:8080/job/Orang-CRM/10/",
+  "vcs" : [ {
+    "revision" : "c67176def3663aaf864d4f0b6bc2ac32cc65bded",
+    "url" : "https://github.com/nakanaan/tibcogit.git"
+  } ],
+  "vcsRevision" : "c67176def3663aaf864d4f0b6bc2ac32cc65bded",
+  "vcsUrl" : "https://github.com/nakanaan/tibcogit.git",
   "licenseControl" : {
     "runChecks" : false,
     "includePublishedArtifacts" : false,
@@ -69,8 +74,8 @@
     "id" : "com.tibco.bw:poc.orange.crm:1.0.0-SNAPSHOT",
     "artifacts" : [ {
       "type" : "bwear",
-      "sha1" : "d72178a4b14c3eca999cf52f2ad34b535c2caf01",
-      "md5" : "89f2d6dd3fb90843b1431cda9a11a395",
+      "sha1" : "f07824bf6840d387d0fba805d92500cc761e3cb3",
+      "md5" : "1bf1a49b62de67ccb07eaec2fd2d67bb",
       "name" : "poc.orange.crm-1.0.0-SNAPSHOT.ear"
     }, {
       "type" : "pom",
@@ -83,8 +88,8 @@
     "id" : "com.tibco.bw:poc.orange.crm.module:1.0.0-SNAPSHOT",
     "artifacts" : [ {
       "type" : "bwmodule-jar",
-      "sha1" : "07c2eb47da0a7aa770c6da3179d99370674e8dd7",
-      "md5" : "c955fed094ec2470730217fea8da6f16",
+      "sha1" : "5e40d09440ebf0129d4bbc14765f1e0f8c6f8f70",
+      "md5" : "378fcf00a3b0125ec902093d37c59024",
       "name" : "poc.orange.crm.module-1.0.0-SNAPSHOT.jar"
     }, {
       "type" : "pom",
