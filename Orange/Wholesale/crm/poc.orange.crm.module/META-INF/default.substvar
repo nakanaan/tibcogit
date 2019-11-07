@@ -75,7 +75,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>APP.ORANGECRM.PORT</name>
-			<value>10001</value>
+			<value>10003</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>
