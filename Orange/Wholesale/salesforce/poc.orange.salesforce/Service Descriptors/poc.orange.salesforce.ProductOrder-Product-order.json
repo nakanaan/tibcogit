@@ -1,0 +1,221 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:10005",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/product-order" : {
+      "post" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "postProduct-order",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/product"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a product to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/product"
+            }
+          },
+          "500" : {
+            "description" : "Internal Error",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "get" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "getProduct-orderjmj",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "category",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a product to be returned",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/product",
+                "uniqueItems" : false
+              }
+            }
+          },
+          "500" : {
+            "description" : "Internal Error",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      },
+      "put" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "putProduct-order",
+        "consumes" : [ "application/json", "application/xml" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/productNoID"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a product to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/product"
+            }
+          },
+          "500" : {
+            "description" : "Internal Error",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    },
+    "/product-order/{orderid}" : {
+      "get" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "getProduct-order",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json", "application/xml" ],
+        "parameters" : [ {
+          "name" : "orderid",
+          "in" : "path",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a product to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/product"
+            }
+          },
+          "500" : {
+            "description" : "Internal Error",
+            "schema" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "product" : {
+      "type" : "object",
+      "properties" : {
+        "sf-guid" : {
+          "type" : "string"
+        },
+        "id" : {
+          "type" : "string"
+        },
+        "href" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
+          "type" : "string"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "completionDate" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "notificationContact" : {
+          "type" : "string"
+        },
+        "orderDate" : {
+          "type" : "string"
+        },
+        "priority" : {
+          "type" : "string"
+        },
+        "price" : {
+          "type" : "integer"
+        },
+        "discountRate" : {
+          "type" : "integer"
+        }
+      }
+    },
+    "productNoID" : {
+      "type" : "object",
+      "properties" : {
+        "href" : {
+          "type" : "string"
+        },
+        "name" : {
+          "type" : "string"
+        },
+        "cancellationDate" : {
+          "type" : "string"
+        },
+        "category" : {
+          "type" : "string"
+        },
+        "completionDate" : {
+          "type" : "string"
+        },
+        "description" : {
+          "type" : "string"
+        },
+        "notificationContact" : {
+          "type" : "string"
+        },
+        "orderDate" : {
+          "type" : "string"
+        },
+        "priority" : {
+          "type" : "string"
+        },
+        "price" : {
+          "type" : "integer"
+        },
+        "discountRate" : {
+          "type" : "integer"
+        }
+      }
+    }
+  }
+}

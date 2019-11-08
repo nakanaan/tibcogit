@@ -12,5 +12,8 @@
         }],
         "url": "https://eu.integration.cloud.tibco.com:443"
     }],
-    "resources": []
+    "resources": [{
+        "location": "Service Descriptors/poc.orange.salesforce.ProductOrder-Product-order.json",
+        "type": "generated"
+    }]
 }
