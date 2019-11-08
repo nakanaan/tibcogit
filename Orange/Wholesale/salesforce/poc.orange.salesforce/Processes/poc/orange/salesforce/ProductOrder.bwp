@@ -8845,7 +8845,7 @@
                                     <value
                                     bindingName="SOAPReferenceBinding"
                                     partnerLink="Soap"
-                                    query="SELECT CreatedById,CreatedDate,Id,IsDeleted,LastActivityDate,LastModifiedById,LastModifiedDate,LastReferencedDate,LastViewedDate,Name,OwnerId,SystemModstamp,cancellationDate__c,category__c,completionDate__c,description__c,discountRate__c,href__c,id__c,notificationContact__c,orderDate__c,price__c,priority__c FROM ProductOrder__c WHERE category__c =?"
+                                    query="SELECT CreatedById,CreatedDate,Id,IsDeleted,LastActivityDate,LastModifiedById,LastModifiedDate,LastReferencedDate,LastViewedDate,Name,OwnerId,SystemModstamp,cancellationDate__c,category__c,completionDate__c,description__c,discountRate__c,href__c,id__c,notificationContact__c,orderDate__c,price__c,priority__c FROM ProductOrder__c WHERE category__c = ?"
                                     queryType="Query"
                                     salesforceConnection="salesforceConnProperty"
                                     wsdlPath="/SalesforceResources/eu25_salesforce.com_enterprise.wsdl" xsi:type="bwsalesforce:SalesforceQuery">
