@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_lROToAINEeqcrOE8AsIEUg" targetNamespace="http://tns.tibco.com/bw/composite/poc.orange.salesforce" name="poc.orange.salesforce" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_nRpTQgINEeqcrOE8AsIEUg" name="product-order" promote="ComponentProcess/product-order">
+    <sca:interface.wsdl xmi:id="_nRpTRgINEeqcrOE8AsIEUg" interface="http://xmlns.example.com/20191108105315PLT#wsdl.interface(product-order)" scaext:wsdlLocation="../Processes/poc/orange/salesforce/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_nRpTRwINEeqcrOE8AsIEUg" name="RestService" path="/product-order/{orderid}" docBasePath="http://localhost:7777/poc.orange.salesforce" docResourcePath="Product-order" basePath="/" connector="poc.orange.salesforce.Process" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/Orange Salesforce API_1.0.json">
+      <operation xmi:id="_nRpTSQINEeqcrOE8AsIEUg" operationName="get" nickname="getProduct-order" httpMethod="GET" responseStyle="element">
+        <responseStatus xmi:id="_nSF_MAINEeqcrOE8AsIEUg" statusCode="500" reasonPhrase="Internal Error" dataType="string"/>
+        <clientFormat>json</clientFormat>
+        <clientFormat>xml</clientFormat>
+      </operation>
+      <parameters xmi:id="_nSF_MQINEeqcrOE8AsIEUg">
+        <parameterMapping xmi:id="_nSF_MgINEeqcrOE8AsIEUg" parameterName="orderid" parameterType="Path" dataType="string" required="true" description=""/>
+      </parameters>
+      <advancedConfig xmi:id="_nRpTSAINEeqcrOE8AsIEUg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_nRpTSgINEeqcrOE8AsIEUg" bindingName="RestService"/>
+  </sca:service>
+  <sca:service xmi:id="_YC-lIAIXEeq0z-CMprxL8A" name="product-order1" promote="ComponentProcess/product-order1">
+    <sca:interface.wsdl xmi:id="_YDErwAIXEeq0z-CMprxL8A" interface="http://xmlns.example.com/20191108105315PLT#wsdl.interface(product-order1)" scaext:wsdlLocation="../Processes/poc/orange/salesforce/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_YDI9MAIXEeq0z-CMprxL8A" name="RestService1" path="/product-order" docBasePath="http://localhost:7777/poc.orange.salesforce" docResourcePath="Product-order" basePath="/" connector="poc.orange.salesforce.Process" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/Orange Salesforce API_1.0.json">
+      <operation xmi:id="_YDKyYAIXEeq0z-CMprxL8A" operationName="post" nickname="postProduct-order" httpMethod="POST" responseStyle="element" requestStyle="element">
+        <responseStatus xmi:id="_YDKyZAIXEeq0z-CMprxL8A" statusCode="500" reasonPhrase="Internal Error" dataType="string"/>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+        <clientRequestFormat>xml</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_YDKyYQIXEeq0z-CMprxL8A" operationName="get" nickname="getProduct-orderjmj" httpMethod="GET" responseStyle="array">
+        <parameters xmi:id="_YDKyaAIXEeq0z-CMprxL8A">
+          <parameterMapping xmi:id="_YDKyaQIXEeq0z-CMprxL8A" parameterName="category" parameterType="Query" dataType="string" description=""/>
+        </parameters>
+        <responseStatus xmi:id="_YDKyZQIXEeq0z-CMprxL8A" statusCode="500" reasonPhrase="Internal Error" dataType="string"/>
+        <clientFormat>json</clientFormat>
+      </operation>
+      <operation xmi:id="_YDKyYgIXEeq0z-CMprxL8A" operationName="put" nickname="putProduct-order" httpMethod="PUT" responseStyle="element" requestStyle="element">
+        <responseStatus xmi:id="_YDKyZgIXEeq0z-CMprxL8A" statusCode="500" reasonPhrase="Internal Error" dataType="string"/>
+        <clientFormat>json</clientFormat>
+        <clientFormat>xml</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+        <clientRequestFormat>xml</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_YDKyZwIXEeq0z-CMprxL8A"/>
+      <advancedConfig xmi:id="_YDI9MQIXEeq0z-CMprxL8A" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_YDKyYwIXEeq0z-CMprxL8A" bindingName="RestService1"/>
+  </sca:service>
+  <sca:property xmi:id="_lZpP0AINEeqcrOE8AsIEUg" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_lZyZwAINEeqcrOE8AsIEUg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_lZyZwQINEeqcrOE8AsIEUg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_lZyZwgINEeqcrOE8AsIEUg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_lZyZwwINEeqcrOE8AsIEUg" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_lZyZxAINEeqcrOE8AsIEUg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_lZyZxQINEeqcrOE8AsIEUg" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_lZyZxgINEeqcrOE8AsIEUg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_lZ8KwAINEeqcrOE8AsIEUg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_PFy90AIOEeqcrOE8AsIEUg" name="salesforce.wsdl" type="XMLSchema:string" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_lUtsgAINEeqcrOE8AsIEUg" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_lUtsgQINEeqcrOE8AsIEUg" processName="poc.orange.salesforce.Process"/>
+    <sca:service xmi:id="_nRpTQAINEeqcrOE8AsIEUg" name="product-order">
+      <sca:interface.wsdl xmi:id="_nRpTQQINEeqcrOE8AsIEUg" interface="http://xmlns.example.com/20191108105315PLT#wsdl.interface(product-order)"/>
+    </sca:service>
+    <sca:service xmi:id="_YC66wAIXEeq0z-CMprxL8A" name="product-order1">
+      <sca:interface.wsdl xmi:id="_YC8I4AIXEeq0z-CMprxL8A" interface="http://xmlns.example.com/20191108105315PLT#wsdl.interface(product-order1)" scaext:wsdlLocation="../Processes/poc/orange/salesforce/Process.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

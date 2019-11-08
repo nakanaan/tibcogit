@@ -1,0 +1,349 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Orange Salesforce API",
+    "x-lastModified": "Nov 07, 2019 07:58AM PST"
+  },
+  "paths": {
+    "/product-order/{orderid}": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/product"
+            },
+            "examples": {
+              "application/json": {
+                "id": "string",
+                "href": "string",
+                "name": "string",
+                "cancellationDate": "2019-11-07T14:08:02.476Z",
+                "cancellationReason": "string",
+                "category": "string",
+                "completionDate": "2019-11-07T14:08:02.476Z",
+                "description": "string",
+                "notificationContact": "string",
+                "orderDate": "2019-11-07T14:08:02.476Z",
+                "priority": "string",
+                "requestedCompletionDate": "2019-11-07T14:08:02.476Z",
+                "requestedStartDate": "2019-11-07T14:08:02.476Z",
+                "price": 2500.55
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "orderid",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getProduct-order"
+      }
+    },
+    "/product-order": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/product"
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "category",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": ""
+          }
+        ],
+        "operationId": "getProduct-orderjmj"
+      },
+      "put": {
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/product"
+            }
+          },
+          "500": {
+            "description": "Internal Error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Product to create",
+            "schema": {
+              "$ref": "#/definitions/productNoID"
+            }
+          }
+        ],
+        "operationId": "putProduct-order",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ]
+      },
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/product"
+            }
+          },
+          "500": {
+            "description": "Internal Error"
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Product to update",
+            "schema": {
+              "$ref": "#/definitions/product"
+            }
+          }
+        ],
+        "operationId": "postProduct-order",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "productOut": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "string"
+        },
+        "href": {
+          "type": "string",
+          "default": "string"
+        },
+        "name": {
+          "type": "string",
+          "default": "string"
+        },
+        "cancellationDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "cancellationReason": {
+          "type": "string",
+          "default": "string"
+        },
+        "category": {
+          "type": "string",
+          "default": "string"
+        },
+        "completionDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "description": {
+          "type": "string",
+          "default": "string"
+        },
+        "notificationContact": {
+          "type": "string",
+          "default": "string"
+        },
+        "orderDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "priority": {
+          "type": "string",
+          "default": "string"
+        },
+        "requestedCompletionDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "requestedStartDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "price": {
+          "type": "number",
+          "default": 2500.55
+        }
+      }
+    },
+    "product": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "default": "string"
+        },
+        "href": {
+          "type": "string",
+          "default": "string"
+        },
+        "name": {
+          "type": "string",
+          "default": "string"
+        },
+        "cancellationDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "cancellationReason": {
+          "type": "string",
+          "default": "string"
+        },
+        "category": {
+          "type": "string",
+          "default": "string"
+        },
+        "completionDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "description": {
+          "type": "string",
+          "default": "string"
+        },
+        "notificationContact": {
+          "type": "string",
+          "default": "string"
+        },
+        "orderDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "priority": {
+          "type": "string",
+          "default": "string"
+        },
+        "requestedCompletionDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "requestedStartDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "price": {
+          "type": "number",
+          "default": 2500.55
+        }
+      }
+    },
+    "productNoID": {
+      "type": "object",
+      "properties": {
+        "href": {
+          "type": "string",
+          "default": "string"
+        },
+        "name": {
+          "type": "string",
+          "default": "string"
+        },
+        "cancellationDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "cancellationReason": {
+          "type": "string",
+          "default": "string"
+        },
+        "category": {
+          "type": "string",
+          "default": "string"
+        },
+        "completionDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "description": {
+          "type": "string",
+          "default": "string"
+        },
+        "notificationContact": {
+          "type": "string",
+          "default": "string"
+        },
+        "orderDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "priority": {
+          "type": "string",
+          "default": "string"
+        },
+        "requestedCompletionDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "requestedStartDate": {
+          "type": "string",
+          "format": "date-time",
+          "default": "2019-11-07T14:08:02.476Z"
+        },
+        "price": {
+          "type": "number",
+          "default": 2500.55
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+    "records": [{
+        "name": "EU Cloud",
+        "items": [{
+            "localTimestamp": 1573206797384,
+            "localURI": "/poc.orange.salesforce/Service Descriptors/Orange Salesforce API_1.0.json",
+            "disabled": false,
+            "remoteTimestamp": 1573138738000,
+            "localHash": "0d5a5766c730208ae2b2a6e3f92a8e1aac876268",
+            "remoteId": "298",
+            "remoteHash": "0d5a5766c730208ae2b2a6e3f92a8e1aac876268"
+        }],
+        "url": "https://eu.integration.cloud.tibco.com:443"
+    }],
+    "resources": []
+}

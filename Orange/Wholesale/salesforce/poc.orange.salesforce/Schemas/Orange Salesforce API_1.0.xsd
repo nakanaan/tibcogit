@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="/T1573206807977Converted/JsonSchema" xmlns:tns="/T1573206807977Converted/JsonSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="productOut" type="tns:productOut"/>
+    <xs:complexType name="productOut">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="id" type="xs:string"/>
+            <xs:element minOccurs="0" name="href" type="xs:string"/>
+            <xs:element minOccurs="0" name="name" type="xs:string"/>
+            <xs:element minOccurs="0" name="cancellationDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="cancellationReason" type="xs:string"/>
+            <xs:element minOccurs="0" name="category" type="xs:string"/>
+            <xs:element minOccurs="0" name="completionDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="description" type="xs:string"/>
+            <xs:element minOccurs="0" name="notificationContact" type="xs:string"/>
+            <xs:element minOccurs="0" name="orderDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="priority" type="xs:string"/>
+            <xs:element minOccurs="0" name="requestedCompletionDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="requestedStartDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="price" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="productNoID" type="tns:productNoID"/>
+    <xs:complexType name="productNoID">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="href" type="xs:string"/>
+            <xs:element minOccurs="0" name="name" type="xs:string"/>
+            <xs:element minOccurs="0" name="cancellationDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="category" type="xs:string"/>
+            <xs:element minOccurs="0" name="completionDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="description" type="xs:string"/>
+            <xs:element minOccurs="0" name="notificationContact" type="xs:string"/>
+            <xs:element minOccurs="0" name="orderDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="priority" type="xs:string"/>
+            <xs:element minOccurs="0" name="price" type="xs:decimal"/>
+            <xs:element minOccurs="0" name="discountRate" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="productArray" type="tns:productArray"/>
+    <xs:complexType name="productArray">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="product" type="tns:product"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="product" type="tns:product"/>
+    <xs:complexType name="product">
+        <xs:sequence>
+        	<xs:element minOccurs="0" name="sf-guid" type="xs:string"/>
+            <xs:element minOccurs="0" name="id" type="xs:string"/>
+            <xs:element minOccurs="0" name="href" type="xs:string"/>
+            <xs:element minOccurs="0" name="name" type="xs:string"/>
+            <xs:element minOccurs="0" name="cancellationDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="category" type="xs:string"/>
+            <xs:element minOccurs="0" name="completionDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="description" type="xs:string"/>
+            <xs:element minOccurs="0" name="notificationContact" type="xs:string"/>
+            <xs:element minOccurs="0" name="orderDate" type="xs:dateTime"/>
+            <xs:element minOccurs="0" name="priority" type="xs:string"/>
+            <xs:element minOccurs="0" name="price" type="xs:decimal"/>
+            <xs:element minOccurs="0" name="discountRate" type="xs:decimal"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
