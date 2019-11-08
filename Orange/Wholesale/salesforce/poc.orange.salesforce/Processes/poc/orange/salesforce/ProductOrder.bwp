@@ -4809,6 +4809,7 @@
             namespace="urn:enterprise.soap.sforce.com_updateAllInput" prefix="tns9"/>
         <tibex:namespaceItem
             namespace="urn:enterprise.soap.sforce.com_queryAllInput+c21d073c-22cf-42c0-90bc-2cc03cc23a20+input" prefix="tns10"/>
+        <tibex:namespaceItem namespace="http://tns.tibco.com/bw/REST" prefix="tns11"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="/T1573206807977Converted/JsonSchema"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
@@ -8136,11 +8137,11 @@
             name="Post_500-input" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName2" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns:FaultDetail" name="FaultDetails2" sca-bpel:internal="true"/>
-        <bpws:variable messageType="ns0:post5XXFaultMessage"
+        <bpws:variable messageType="ns0:get5XXFaultMessage1"
             name="Get1_500-input" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName3" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns:FaultDetail" name="FaultDetails3" sca-bpel:internal="true"/>
-        <bpws:variable messageType="ns0:post5XXFaultMessage"
+        <bpws:variable messageType="ns0:put5XXFaultMessage"
             name="Put_500-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
@@ -8175,10 +8176,26 @@
                                     portType="ns0:product-order"
                                     tibex:xpdlId="21ff0de8-0a8f-4ce4-9573-17aed6306e96" variable="Get_500-input">
                                     <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns="http://tns.tibco.com/bw/REST" version="2.0"&gt;&lt;xsl:param name="_error"/&gt;&lt;xsl:template name="Reply-input" match="/"&gt;&lt;tns5:get5XXFaultMessage&gt;&lt;serverError&gt;&lt;tns:server5XXError&gt;&lt;statusCode&gt;&lt;xsl:value-of select="500"/&gt;&lt;/statusCode&gt;&lt;message&gt;&lt;xsl:value-of select="$_error/Msg"/&gt;&lt;/message&gt;&lt;/tns:server5XXError&gt;&lt;/serverError&gt;&lt;/tns5:get5XXFaultMessage&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns11="http://tns.tibco.com/bw/REST" version="2.0"&gt;
+    &lt;xsl:param name="_error"/&gt;
+    &lt;xsl:template name="Reply-input" match="/"&gt;
+        &lt;tns5:get5XXFaultMessage&gt;
+            &lt;serverError&gt;
+                &lt;tns11:server5XXError&gt;
+                    &lt;statusCode&gt;
+                        &lt;xsl:value-of select="500"/&gt;
+                    &lt;/statusCode&gt;
+                    &lt;message&gt;
+                        &lt;xsl:value-of select="$_error/Msg"/&gt;
+                    &lt;/message&gt;
+                &lt;/tns11:server5XXError&gt;
+            &lt;/serverError&gt;
+        &lt;/tns5:get5XXFaultMessage&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                     <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;Reply-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:server5XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;500&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns:server5XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;Reply-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:server5XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;500&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns11:server5XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     </bpws:reply>
                                     </bpws:flow>
@@ -8244,7 +8261,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns11=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:getSessionInput>&#xa;            &lt;tns11:login/>&#xa;        &lt;/tns11:getSessionInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns12:getSessionInput>&#xa;            &lt;tns12:login/>&#xa;        &lt;/tns12:getSessionInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -8268,7 +8285,7 @@
                             </bpws:extensionActivity>
                             <bpws:extensionActivity>
                                 <tibex:activityExtension
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;urn:enterprise.soap.sforce.com_queryAllInput+0fcaa111-024e-4596-97f5-291f3ee8ac13+input&quot; xmlns:tns11=&quot;http://xmlns.example.com/Process/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get&quot;/>&#xa;    &lt;xsl:template name=&quot;SalesforceQueryAll-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:queryAllInput>&#xa;            &lt;query>&#xa;                &lt;fields>&#xa;                    &lt;filter-id>&#xa;                        &lt;xsl:value-of select=&quot;$get/parameters/tns11:product-orderGetParameters/tns11:orderid&quot;/>&#xa;                    &lt;/filter-id>&#xa;                &lt;/fields>&#xa;            &lt;/query>&#xa;        &lt;/tns3:queryAllInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>"
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;urn:enterprise.soap.sforce.com_queryAllInput+0fcaa111-024e-4596-97f5-291f3ee8ac13+input&quot; xmlns:tns12=&quot;http://xmlns.example.com/Process/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get&quot;/>&#xa;    &lt;xsl:template name=&quot;SalesforceQueryAll-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:queryAllInput>&#xa;            &lt;query>&#xa;                &lt;fields>&#xa;                    &lt;filter-id>&#xa;                        &lt;xsl:value-of select=&quot;$get/parameters/tns12:product-orderGetParameters/tns12:orderid&quot;/>&#xa;                    &lt;/filter-id>&#xa;                &lt;/fields>&#xa;            &lt;/query>&#xa;        &lt;/tns3:queryAllInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>"
                                     expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="SalesforceQueryAll-input"
                                     name="SalesforceQueryAll"
@@ -8295,7 +8312,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;urn:enterprise.soap.sforce.com_queryAllInput+0fcaa111-024e-4596-97f5-291f3ee8ac13+input&quot; xmlns:tns11=&quot;http://xmlns.example.com/Process/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;SalesforceQueryAll-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:queryAllInput>&#xa;            &lt;query>&#xa;                &lt;fields>&#xa;                    &lt;filter-id>&#xa;                        &lt;xsl:value-of select=&quot;$get.parameters/tns11:orderid&quot;/>&#xa;                    &lt;/filter-id>&#xa;                &lt;/fields>&#xa;            &lt;/query>&#xa;        &lt;/tns3:queryAllInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns3=&quot;urn:enterprise.soap.sforce.com_queryAllInput+0fcaa111-024e-4596-97f5-291f3ee8ac13+input&quot; xmlns:tns12=&quot;http://xmlns.example.com/Process/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;SalesforceQueryAll-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns3:queryAllInput>&#xa;            &lt;query>&#xa;                &lt;fields>&#xa;                    &lt;filter-id>&#xa;                        &lt;xsl:value-of select=&quot;$get.parameters/tns12:orderid&quot;/>&#xa;                    &lt;/filter-id>&#xa;                &lt;/fields>&#xa;            &lt;/query>&#xa;        &lt;/tns3:queryAllInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -8375,10 +8392,26 @@
                                 portType="ns0:product-order"
                                 tibex:xpdlId="8b935535-9763-40d3-b773-44a2d9b541f9" variable="ErrorGetOut-input">
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns="http://tns.tibco.com/bw/REST" xmlns:tns1="http://xmlns.example.com/Process/parameters" version="2.0"&gt;&lt;xsl:param name="get"/&gt;&lt;xsl:template name="ErrorGetOut-input" match="/"&gt;&lt;tns5:get4XXFaultMessage&gt;&lt;clientError&gt;&lt;tns:client4XXError&gt;&lt;statusCode&gt;&lt;xsl:value-of select="400"/&gt;&lt;/statusCode&gt;&lt;message&gt;&lt;xsl:value-of select="concat(&amp;quot;Record &amp;quot;,$get/parameters/tns1:product-orderGetParameters/tns1:orderid, &amp;quot; not found&amp;quot;)"/&gt;&lt;/message&gt;&lt;/tns:client4XXError&gt;&lt;/clientError&gt;&lt;/tns5:get4XXFaultMessage&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns11="http://tns.tibco.com/bw/REST" xmlns:tns12="http://xmlns.example.com/Process/parameters" version="2.0"&gt;
+    &lt;xsl:param name="get"/&gt;
+    &lt;xsl:template name="ErrorGetOut-input" match="/"&gt;
+        &lt;tns5:get4XXFaultMessage&gt;
+            &lt;clientError&gt;
+                &lt;tns11:client4XXError&gt;
+                    &lt;statusCode&gt;
+                        &lt;xsl:value-of select="400"/&gt;
+                    &lt;/statusCode&gt;
+                    &lt;message&gt;
+                        &lt;xsl:value-of select="concat(&amp;quot;Record &amp;quot;,$get/parameters/tns12:product-orderGetParameters/tns12:orderid, &amp;quot; not found&amp;quot;)"/&gt;
+                    &lt;/message&gt;
+                &lt;/tns11:client4XXError&gt;
+            &lt;/clientError&gt;
+        &lt;/tns5:get4XXFaultMessage&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns1=&quot;http://xmlns.example.com/Process/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;ErrorGetOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:client4XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;400&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;concat(&amp;quot;Record &amp;quot;,$get.parameters/tns1:orderid, &amp;quot; not found&amp;quot;)&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns:client4XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns12=&quot;http://xmlns.example.com/Process/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;ErrorGetOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:client4XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;400&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;concat(&amp;quot;Record &amp;quot;,$get.parameters/tns12:orderid, &amp;quot; not found&amp;quot;)&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns11:client4XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <bpws:targets>
                                     <bpws:target linkName="Empty1ToReply"/>
@@ -8407,10 +8440,26 @@
                                     portType="ns0:product-order1"
                                     tibex:xpdlId="1a5390e6-8e33-4726-8ae2-a95ba3b2d8b1" variable="Post_500-input">
                                     <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns="http://tns.tibco.com/bw/REST" version="2.0"&gt;&lt;xsl:param name="_error"/&gt;&lt;xsl:template name="Post_500-input" match="/"&gt;&lt;tns5:post5XXFaultMessage&gt;&lt;serverError&gt;&lt;tns:server5XXError&gt;&lt;statusCode&gt;&lt;xsl:value-of select="500"/&gt;&lt;/statusCode&gt;&lt;message&gt;&lt;xsl:value-of select="$_error/Msg"/&gt;&lt;/message&gt;&lt;/tns:server5XXError&gt;&lt;/serverError&gt;&lt;/tns5:post5XXFaultMessage&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns11="http://tns.tibco.com/bw/REST" version="2.0"&gt;
+    &lt;xsl:param name="_error"/&gt;
+    &lt;xsl:template name="Post_500-input" match="/"&gt;
+        &lt;tns5:post5XXFaultMessage&gt;
+            &lt;serverError&gt;
+                &lt;tns11:server5XXError&gt;
+                    &lt;statusCode&gt;
+                        &lt;xsl:value-of select="500"/&gt;
+                    &lt;/statusCode&gt;
+                    &lt;message&gt;
+                        &lt;xsl:value-of select="$_error/Msg"/&gt;
+                    &lt;/message&gt;
+                &lt;/tns11:server5XXError&gt;
+            &lt;/serverError&gt;
+        &lt;/tns5:post5XXFaultMessage&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                     <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;Post_500-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:server5XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;500&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns:server5XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;Post_500-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:server5XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;500&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns11:server5XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     </bpws:reply>
                                     </bpws:flow>
@@ -8470,7 +8519,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns11=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns12:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -8559,7 +8608,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns10=&quot;urn:enterprise.soap.sforce.com_queryAllInput+c21d073c-22cf-42c0-90bc-2cc03cc23a20+input&quot; xmlns:tns=&quot;urn:enterprise.soap.sforce.com_updateAllOutput&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;SalesforceUpdateAll&quot;/>&lt;xsl:template name=&quot;SF_Query_AfterPOST-input&quot; match=&quot;/&quot;>&lt;tns10:queryAllInput>&lt;query>&lt;fields>&lt;filter-sf-guid>&lt;xsl:copy-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns:result[1]/tns:id/@xsi:nil&quot;/>&lt;xsl:value-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns:result[1]/tns:id&quot;/>&lt;/filter-sf-guid>&lt;/fields>&lt;/query>&lt;/tns10:queryAllInput>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns10=&quot;urn:enterprise.soap.sforce.com_queryAllInput+c21d073c-22cf-42c0-90bc-2cc03cc23a20+input&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_updateAllOutput&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;SalesforceUpdateAll&quot;/>&#xa;    &lt;xsl:template name=&quot;SF_Query_AfterPOST-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns10:queryAllInput>&#xa;            &lt;query>&#xa;                &lt;fields>&#xa;                    &lt;filter-sf-guid>&#xa;                        &lt;xsl:copy-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:id/@xsi:nil&quot;/>&#xa;                        &lt;xsl:value-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:id&quot;/>&#xa;                    &lt;/filter-sf-guid>&#xa;                &lt;/fields>&#xa;            &lt;/query>&#xa;        &lt;/tns10:queryAllInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -8639,10 +8688,28 @@
                                 portType="ns0:product-order1"
                                 tibex:xpdlId="06f653d5-227f-46bf-97db-5b10104b306b" variable="ErrorPostOut-input">
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns="http://tns.tibco.com/bw/REST" xmlns:tns1="urn:enterprise.soap.sforce.com_updateAllOutput" version="2.0"&gt;&lt;xsl:param name="SalesforceUpdateAll"/&gt;&lt;xsl:template name="ErrorPostOut-input" match="/"&gt;&lt;tns5:post4XXFaultMessage&gt;&lt;clientError&gt;&lt;tns:client4XXError&gt;&lt;statusCode&gt;&lt;xsl:value-of select="400"/&gt;&lt;/statusCode&gt;&lt;xsl:if test="$SalesforceUpdateAll/updateAllResponse/tns1:result[1]/tns1:errors[1]/tns1:message"&gt;&lt;message&gt;&lt;xsl:value-of select="$SalesforceUpdateAll/updateAllResponse/tns1:result[1]/tns1:errors[1]/tns1:message"/&gt;&lt;/message&gt;&lt;/xsl:if&gt;&lt;/tns:client4XXError&gt;&lt;/clientError&gt;&lt;/tns5:post4XXFaultMessage&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns11="http://tns.tibco.com/bw/REST" xmlns:tns12="urn:enterprise.soap.sforce.com_updateAllOutput" version="2.0"&gt;
+    &lt;xsl:param name="SalesforceUpdateAll"/&gt;
+    &lt;xsl:template name="ErrorPostOut-input" match="/"&gt;
+        &lt;tns5:post4XXFaultMessage&gt;
+            &lt;clientError&gt;
+                &lt;tns11:client4XXError&gt;
+                    &lt;statusCode&gt;
+                        &lt;xsl:value-of select="400"/&gt;
+                    &lt;/statusCode&gt;
+                    &lt;xsl:if test="$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:errors[1]/tns12:message"&gt;
+                        &lt;message&gt;
+                            &lt;xsl:value-of select="$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:errors[1]/tns12:message"/&gt;
+                        &lt;/message&gt;
+                    &lt;/xsl:if&gt;
+                &lt;/tns11:client4XXError&gt;
+            &lt;/clientError&gt;
+        &lt;/tns5:post4XXFaultMessage&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns1=&quot;urn:enterprise.soap.sforce.com_updateAllOutput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;SalesforceUpdateAll&quot;/>&#xa;    &lt;xsl:template name=&quot;ErrorPostOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:client4XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;400&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;xsl:if test=&quot;$SalesforceUpdateAll/updateAllResponse/tns1:result[1]/tns1:errors[1]/tns1:message&quot;>&#xa;                &lt;message>&#xa;                    &lt;xsl:value-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns1:result[1]/tns1:errors[1]/tns1:message&quot;/>&#xa;                &lt;/message>&#xa;            &lt;/xsl:if>&#xa;        &lt;/tns:client4XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_updateAllOutput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;SalesforceUpdateAll&quot;/>&#xa;    &lt;xsl:template name=&quot;ErrorPostOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:client4XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;400&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;xsl:if test=&quot;$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:errors[1]/tns12:message&quot;>&#xa;                &lt;message>&#xa;                    &lt;xsl:value-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:errors[1]/tns12:message&quot;/>&#xa;                &lt;/message>&#xa;            &lt;/xsl:if>&#xa;        &lt;/tns11:client4XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <bpws:targets>
                                     <bpws:target linkName="EmptyToReply"/>
@@ -8666,15 +8733,15 @@
                                     <bpws:reply
                                     faultName="serverFault"
                                     name="Get1_500"
-                                    operation="post"
+                                    operation="get"
                                     partnerLink="product-order1"
                                     portType="ns0:product-order1"
                                     tibex:xpdlId="cd1e4d05-5105-41de-b663-209141e25680" variable="Get1_500-input">
                                     <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns="http://tns.tibco.com/bw/REST" version="2.0"&gt;&lt;xsl:param name="_error"/&gt;&lt;xsl:template name="Get1_500-input" match="/"&gt;&lt;tns5:post5XXFaultMessage&gt;&lt;serverError&gt;&lt;tns:server5XXError&gt;&lt;statusCode&gt;&lt;xsl:value-of select="500"/&gt;&lt;/statusCode&gt;&lt;message&gt;&lt;xsl:value-of select="$_error/Msg"/&gt;&lt;/message&gt;&lt;/tns:server5XXError&gt;&lt;/serverError&gt;&lt;/tns5:post5XXFaultMessage&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns11="http://tns.tibco.com/bw/REST" version="2.0"&gt;&lt;xsl:param name="_error"/&gt;&lt;xsl:template name="Get1_500-input" match="/"&gt;&lt;tns5:get5XXFaultMessage1&gt;&lt;serverError&gt;&lt;tns11:server5XXError&gt;&lt;statusCode&gt;&lt;xsl:value-of select="500"/&gt;&lt;/statusCode&gt;&lt;message&gt;&lt;xsl:value-of select="$_error/Msg"/&gt;&lt;/message&gt;&lt;/tns11:server5XXError&gt;&lt;/serverError&gt;&lt;/tns5:get5XXFaultMessage1&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                     <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;Get1_500-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:server5XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;500&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns:server5XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;Get1_500-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:server5XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;500&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns11:server5XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     </bpws:reply>
                                     </bpws:flow>
@@ -8726,7 +8793,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns11=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns12:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -8847,15 +8914,15 @@
                                     <bpws:reply
                                     faultName="serverFault"
                                     name="Put_500"
-                                    operation="post"
+                                    operation="put"
                                     partnerLink="product-order1"
                                     portType="ns0:product-order1"
                                     tibex:xpdlId="7c2bdbcd-9c81-4548-8db9-3e23e8090824" variable="Put_500-input">
                                     <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns="http://tns.tibco.com/bw/REST" version="2.0"&gt;&lt;xsl:param name="_error"/&gt;&lt;xsl:template name="Put_500-input" match="/"&gt;&lt;tns5:post5XXFaultMessage&gt;&lt;serverError&gt;&lt;tns:server5XXError&gt;&lt;statusCode&gt;&lt;xsl:value-of select="500"/&gt;&lt;/statusCode&gt;&lt;message&gt;&lt;xsl:value-of select="$_error/Msg"/&gt;&lt;/message&gt;&lt;/tns:server5XXError&gt;&lt;/serverError&gt;&lt;/tns5:post5XXFaultMessage&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns11="http://tns.tibco.com/bw/REST" version="2.0"&gt;&lt;xsl:param name="_error"/&gt;&lt;xsl:template name="Put_500-input" match="/"&gt;&lt;tns5:put5XXFaultMessage&gt;&lt;serverError&gt;&lt;tns11:server5XXError&gt;&lt;statusCode&gt;&lt;xsl:value-of select="500"/&gt;&lt;/statusCode&gt;&lt;message&gt;&lt;xsl:value-of select="$_error/Msg"/&gt;&lt;/message&gt;&lt;/tns11:server5XXError&gt;&lt;/serverError&gt;&lt;/tns5:put5XXFaultMessage&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                     <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;Put_500-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:server5XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;500&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns:server5XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;_error&quot;/>&#xa;    &lt;xsl:template name=&quot;Put_500-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:server5XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;500&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;$_error/Msg&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns11:server5XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     </bpws:reply>
                                     </bpws:flow>
@@ -8910,7 +8977,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns11=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns12:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
