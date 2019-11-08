@@ -1440,6 +1440,11 @@
                     tibex:reasonPhrase="Internal Error"
                     tibex:statusCode="500" type="xsd:string"/>
             </wsdl:message>
+            <wsdl:message name="get400FaultMessage">
+                <wsdl:part name="server-400-BadRequest"
+                    tibex:reasonPhrase="Bad Request"
+                    tibex:statusCode="400" type="xsd:string"/>
+            </wsdl:message>
             <wsdl:portType name="product-order"
                 tibex:bw.rest.apipath="/product-order/{orderid}"
                 tibex:bw.rest.basepath="Process"
@@ -1453,6 +1458,7 @@
                     <wsdl:fault message="tns:get4XXFaultMessage" name="clientFault"/>
                     <wsdl:fault message="tns:get5XXFaultMessage" name="serverFault"/>
                     <wsdl:fault message="tns:get500FaultMessage" name="server-500-Fault"/>
+                    <wsdl:fault message="tns:get400FaultMessage" name="server-400-Fault"/>
                 </wsdl:operation>
             </wsdl:portType>
             <wsdl:portType name="product-order1"
@@ -3501,6 +3507,114 @@
                                     xsi:type="notation:Bounds" y="28"/>
                                     </children>
 
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@activities.6"/>
+
+                                    <layoutConstraint
+                                    x="150"
+                                    xsi:type="notation:Bounds" y="160"/>
+                                    </children>
+
+                                    <children type="4002">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@activities.7"/>
+
+                                    <layoutConstraint
+                                    x="417"
+                                    xsi:type="notation:Bounds" y="160"/>
+                                    </children>
+
                                     <styles xsi:type="notation:DrawerStyle"/>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -3524,8 +3638,8 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity"/>
 
                                     <layoutConstraint
-                                    height="161"
-                                    width="801" xsi:type="notation:Bounds"/>
+                                    height="271"
+                                    width="924" xsi:type="notation:Bounds"/>
                                     </children>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -3546,7 +3660,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity"/>
 
                                     <layoutConstraint
-                                    height="206"
+                                    height="270"
                                     width="927"
                                     x="15" xsi:type="notation:Bounds"/>
                                     </children>
@@ -3733,7 +3847,7 @@
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity"/>
 
                                     <layoutConstraint
-                                    height="360"
+                                    height="423"
                                     width="967" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -3797,10 +3911,10 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0/@messages.2"/>
                                     <layoutConstraint
-                                    height="379"
+                                    height="442"
                                     width="1029"
                                     x="2"
-                                    xsi:type="notation:Bounds" y="879"/>
+                                    xsi:type="notation:Bounds" y="883"/>
                                     </children>
                                     <children type="4011">
                                     <children type="3012">
@@ -4486,7 +4600,7 @@
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.0"/>
                                     <layoutConstraint
-                                    height="1619"
+                                    height="1685"
                                     width="1048" xsi:type="notation:Bounds"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -4501,7 +4615,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="1846"
+                                    <layoutConstraint height="1695"
                                     width="1058" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -4512,7 +4626,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="1846" width="1061" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="1695" width="1061" xsi:type="notation:Bounds"/>
                         </children>
                         <styles xsi:type="notation:SortingStyle"/>
                         <styles xsi:type="notation:FilteringStyle"/>
@@ -4522,7 +4636,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="1870" width="1061" x="1"
+                    <layoutConstraint height="1719" width="1061" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -4531,7 +4645,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="1764" width="1403" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="1771" width="1403" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -4759,7 +4873,7 @@
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
             target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
             <children type="6002">
-                <layoutConstraint xsi:type="notation:Location" y="40"/>
+                <layoutConstraint xsi:type="notation:Location" y="28"/>
             </children>
             <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
             <styles fontColor="255" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
@@ -4775,6 +4889,28 @@
             <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
             <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.5"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.2/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.2/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4" type="4006">
+            <children type="6002">
+                <layoutConstraint x="9" xsi:type="notation:Location" y="33"/>
+            </children>
+            <styles lineColor="255" xsi:type="notation:ConnectorStyle"/>
+            <styles fontColor="255" fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@links/@children.4"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.2/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.4"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.2/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.5" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.2/@activity/@activity/@links/@children.5"/>
             <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
@@ -4810,6 +4946,10 @@
         <tibex:namespaceItem
             namespace="urn:enterprise.soap.sforce.com_queryAllInput+c21d073c-22cf-42c0-90bc-2cc03cc23a20+input" prefix="tns10"/>
         <tibex:namespaceItem namespace="http://tns.tibco.com/bw/REST" prefix="tns11"/>
+        <tibex:namespaceItem
+            namespace="http://xmlns.example.com/Process/parameters" prefix="tns12"/>
+        <tibex:namespaceItem
+            namespace="urn:enterprise.soap.sforce.com_updateAllOutput" prefix="tns13"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="/T1573206807977Converted/JsonSchema"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
@@ -8123,9 +8263,9 @@
             name="_error_SF_Query_AfterPOST" sca-bpel:internal="true"/>
         <bpws:variable element="ns7:product" name="Mapper_POST-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns7:product" name="Mapper_POST" sca-bpel:internal="true"/>
-        <bpws:variable messageType="ns0:post4XXFaultMessage"
+        <bpws:variable messageType="ns0:post5XXFaultMessage"
             name="ErrorPostOut-input" sca-bpel:internal="true"/>
-        <bpws:variable messageType="ns0:get4XXFaultMessage"
+        <bpws:variable messageType="ns0:get5XXFaultMessage"
             name="ErrorGetOut-input" sca-bpel:internal="true"/>
         <bpws:variable name="FaultName" sca-bpel:internal="true" type="xsd:string"/>
         <bpws:variable element="ns:FaultDetail" name="FaultDetails" sca-bpel:internal="true"/>
@@ -8143,6 +8283,8 @@
         <bpws:variable element="ns:FaultDetail" name="FaultDetails3" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns0:put5XXFaultMessage"
             name="Put_500-input" sca-bpel:internal="true"/>
+        <bpws:variable messageType="ns0:get5XXFaultMessage1"
+            name="NoRecords_Out-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -8213,7 +8355,8 @@
                                     tibex:label="Record Found" tibex:linkType="SUCCESSWITHCONDITION"/>
                                 <bpws:link name="MapperTogetOut" tibex:linkType="SUCCESS"/>
                                 <bpws:link
-                                    name="SalesforceQueryAllToEmpty1" tibex:linkType="SUCCESSWITHNOCONDITION"/>
+                                    name="SalesforceQueryAllToEmpty1_Norecords"
+                                    tibex:label="No records" tibex:linkType="SUCCESSWITHNOCONDITION"/>
                                 <bpws:link name="Empty1ToReply" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart"
@@ -8261,7 +8404,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns12:getSessionInput>&#xa;            &lt;tns12:login/>&#xa;        &lt;/tns12:getSessionInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns14=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns14:getSessionInput>&#xa;            &lt;tns14:login/>&#xa;        &lt;/tns14:getSessionInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -8302,7 +8445,7 @@
                                     </tibex:DesignExpression>
                                     <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[xsd:boolean(count($SalesforceQueryAll/queryAllResponse/ns5:result/ns5:records))]]></bpws:transitionCondition>
                                     </bpws:source>
-                                    <bpws:source linkName="SalesforceQueryAllToEmpty1">
+                                    <bpws:source linkName="SalesforceQueryAllToEmpty1_Norecords">
                                     <tibex:DesignExpression>
                                     <tibex:expression
                                     expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
@@ -8380,38 +8523,22 @@
                             </bpws:extensionActivity>
                             <bpws:empty name="Empty1" tibex:xpdlId="3dd61a92-153e-43a8-a0b9-9822ab53b30c">
                                 <bpws:targets>
-                                    <bpws:target linkName="SalesforceQueryAllToEmpty1"/>
+                                    <bpws:target linkName="SalesforceQueryAllToEmpty1_Norecords"/>
                                 </bpws:targets>
                                 <bpws:sources>
                                     <bpws:source linkName="Empty1ToReply"/>
                                 </bpws:sources>
                             </bpws:empty>
-                            <bpws:reply faultName="clientFault"
+                            <bpws:reply faultName="serverFault"
                                 name="ErrorGetOut" operation="get"
                                 partnerLink="product-order"
                                 portType="ns0:product-order"
                                 tibex:xpdlId="8b935535-9763-40d3-b773-44a2d9b541f9" variable="ErrorGetOut-input">
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns11="http://tns.tibco.com/bw/REST" xmlns:tns12="http://xmlns.example.com/Process/parameters" version="2.0"&gt;
-    &lt;xsl:param name="get"/&gt;
-    &lt;xsl:template name="ErrorGetOut-input" match="/"&gt;
-        &lt;tns5:get4XXFaultMessage&gt;
-            &lt;clientError&gt;
-                &lt;tns11:client4XXError&gt;
-                    &lt;statusCode&gt;
-                        &lt;xsl:value-of select="400"/&gt;
-                    &lt;/statusCode&gt;
-                    &lt;message&gt;
-                        &lt;xsl:value-of select="concat(&amp;quot;Record &amp;quot;,$get/parameters/tns12:product-orderGetParameters/tns12:orderid, &amp;quot; not found&amp;quot;)"/&gt;
-                    &lt;/message&gt;
-                &lt;/tns11:client4XXError&gt;
-            &lt;/clientError&gt;
-        &lt;/tns5:get4XXFaultMessage&gt;
-    &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns11="http://tns.tibco.com/bw/REST" xmlns:tns12="http://xmlns.example.com/Process/parameters" version="2.0"&gt;&lt;xsl:param name="get"/&gt;&lt;xsl:template name="ErrorGetOut-input" match="/"&gt;&lt;tns5:get5XXFaultMessage&gt;&lt;serverError&gt;&lt;tns11:server5XXError&gt;&lt;statusCode&gt;&lt;xsl:value-of select="500"/&gt;&lt;/statusCode&gt;&lt;message&gt;&lt;xsl:value-of select="concat(&amp;quot;Record &amp;quot;,$get/parameters/tns12:product-orderGetParameters/tns12:orderid, &amp;quot; not found&amp;quot;)"/&gt;&lt;/message&gt;&lt;/tns11:server5XXError&gt;&lt;/serverError&gt;&lt;/tns5:get5XXFaultMessage&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns12=&quot;http://xmlns.example.com/Process/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;ErrorGetOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:client4XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;400&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;concat(&amp;quot;Record &amp;quot;,$get.parameters/tns12:orderid, &amp;quot; not found&amp;quot;)&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns11:client4XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns12=&quot;http://xmlns.example.com/Process/parameters&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;ErrorGetOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:server5XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;500&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;concat(&amp;quot;Record &amp;quot;,$get.parameters/tns12:orderid, &amp;quot; not found&amp;quot;)&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns11:server5XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <bpws:targets>
                                     <bpws:target linkName="Empty1ToReply"/>
@@ -8519,7 +8646,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns12:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns14=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns14:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -8608,7 +8735,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns10=&quot;urn:enterprise.soap.sforce.com_queryAllInput+c21d073c-22cf-42c0-90bc-2cc03cc23a20+input&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_updateAllOutput&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;SalesforceUpdateAll&quot;/>&#xa;    &lt;xsl:template name=&quot;SF_Query_AfterPOST-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns10:queryAllInput>&#xa;            &lt;query>&#xa;                &lt;fields>&#xa;                    &lt;filter-sf-guid>&#xa;                        &lt;xsl:copy-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:id/@xsi:nil&quot;/>&#xa;                        &lt;xsl:value-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:id&quot;/>&#xa;                    &lt;/filter-sf-guid>&#xa;                &lt;/fields>&#xa;            &lt;/query>&#xa;        &lt;/tns10:queryAllInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns10=&quot;urn:enterprise.soap.sforce.com_queryAllInput+c21d073c-22cf-42c0-90bc-2cc03cc23a20+input&quot; xmlns:tns13=&quot;urn:enterprise.soap.sforce.com_updateAllOutput&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;SalesforceUpdateAll&quot;/>&#xa;    &lt;xsl:template name=&quot;SF_Query_AfterPOST-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns10:queryAllInput>&#xa;            &lt;query>&#xa;                &lt;fields>&#xa;                    &lt;filter-sf-guid>&#xa;                        &lt;xsl:copy-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns13:result[1]/tns13:id/@xsi:nil&quot;/>&#xa;                        &lt;xsl:value-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns13:result[1]/tns13:id&quot;/>&#xa;                    &lt;/filter-sf-guid>&#xa;                &lt;/fields>&#xa;            &lt;/query>&#xa;        &lt;/tns10:queryAllInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -8682,34 +8809,16 @@
                                     <bpws:source linkName="EmptyToReply"/>
                                 </bpws:sources>
                             </bpws:empty>
-                            <bpws:reply faultName="clientFault"
+                            <bpws:reply faultName="serverFault"
                                 name="ErrorPostOut" operation="post"
                                 partnerLink="product-order1"
                                 portType="ns0:product-order1"
                                 tibex:xpdlId="06f653d5-227f-46bf-97db-5b10104b306b" variable="ErrorPostOut-input">
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns11="http://tns.tibco.com/bw/REST" xmlns:tns12="urn:enterprise.soap.sforce.com_updateAllOutput" version="2.0"&gt;
-    &lt;xsl:param name="SalesforceUpdateAll"/&gt;
-    &lt;xsl:template name="ErrorPostOut-input" match="/"&gt;
-        &lt;tns5:post4XXFaultMessage&gt;
-            &lt;clientError&gt;
-                &lt;tns11:client4XXError&gt;
-                    &lt;statusCode&gt;
-                        &lt;xsl:value-of select="400"/&gt;
-                    &lt;/statusCode&gt;
-                    &lt;xsl:if test="$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:errors[1]/tns12:message"&gt;
-                        &lt;message&gt;
-                            &lt;xsl:value-of select="$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:errors[1]/tns12:message"/&gt;
-                        &lt;/message&gt;
-                    &lt;/xsl:if&gt;
-                &lt;/tns11:client4XXError&gt;
-            &lt;/clientError&gt;
-        &lt;/tns5:post4XXFaultMessage&gt;
-    &lt;/xsl:template&gt;
-&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns11="http://tns.tibco.com/bw/REST" xmlns:tns13="urn:enterprise.soap.sforce.com_updateAllOutput" version="2.0"&gt;&lt;xsl:param name="SalesforceUpdateAll"/&gt;&lt;xsl:template name="ErrorPostOut-input" match="/"&gt;&lt;tns5:post5XXFaultMessage&gt;&lt;serverError&gt;&lt;tns11:server5XXError&gt;&lt;statusCode&gt;&lt;xsl:value-of select="500"/&gt;&lt;/statusCode&gt;&lt;xsl:if test="$SalesforceUpdateAll/updateAllResponse/tns13:result[1]/tns13:errors[1]/tns13:message"&gt;&lt;message&gt;&lt;xsl:value-of select="$SalesforceUpdateAll/updateAllResponse/tns13:result[1]/tns13:errors[1]/tns13:message"/&gt;&lt;/message&gt;&lt;/xsl:if&gt;&lt;/tns11:server5XXError&gt;&lt;/serverError&gt;&lt;/tns5:post5XXFaultMessage&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_updateAllOutput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;SalesforceUpdateAll&quot;/>&#xa;    &lt;xsl:template name=&quot;ErrorPostOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:client4XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;400&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;xsl:if test=&quot;$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:errors[1]/tns12:message&quot;>&#xa;                &lt;message>&#xa;                    &lt;xsl:value-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns12:result[1]/tns12:errors[1]/tns12:message&quot;/>&#xa;                &lt;/message>&#xa;            &lt;/xsl:if>&#xa;        &lt;/tns11:client4XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/REST&quot; xmlns:tns13=&quot;urn:enterprise.soap.sforce.com_updateAllOutput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;SalesforceUpdateAll&quot;/>&#xa;    &lt;xsl:template name=&quot;ErrorPostOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:server5XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;500&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;xsl:if test=&quot;$SalesforceUpdateAll/updateAllResponse/tns13:result[1]/tns13:errors[1]/tns13:message&quot;>&#xa;                &lt;message>&#xa;                    &lt;xsl:value-of select=&quot;$SalesforceUpdateAll/updateAllResponse/tns13:result[1]/tns13:errors[1]/tns13:message&quot;/>&#xa;                &lt;/message>&#xa;            &lt;/xsl:if>&#xa;        &lt;/tns11:server5XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <bpws:targets>
                                     <bpws:target linkName="EmptyToReply"/>
@@ -8754,8 +8863,11 @@
                                     name="OnMessageStart2ToSalesforceGetSession1" tibex:linkType="SUCCESS"/>
                                 <bpws:link
                                     name="SalesforceGetSessionGETToSalesforceQueryAll1" tibex:linkType="SUCCESS"/>
-                                <bpws:link name="SF_query_GETToMapper1" tibex:linkType="SUCCESS"/>
+                                <bpws:link name="SF_query_GETToMapper1" tibex:linkType="SUCCESSWITHCONDITION"/>
                                 <bpws:link name="Mapper_GETTogetOut1" tibex:linkType="SUCCESS"/>
+                                <bpws:link name="SF_query_Norecords"
+                                    tibex:label="No records" tibex:linkType="SUCCESSWITHNOCONDITION"/>
+                                <bpws:link name="Empty2ToReply" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart2"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="8718d715-66a9-443d-aabc-5eb9ab00030a">
@@ -8793,7 +8905,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns12:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns14=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns14:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -8818,6 +8930,8 @@
                             </bpws:extensionActivity>
                             <bpws:extensionActivity>
                                 <tibex:activityExtension
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;urn:enterprise.soap.sforce.com_queryAllInput+7a004d6e-f758-40e8-bcca-2eaa9a4d49a1+input&quot; xmlns:tns14=&quot;http://xmlns.example.com/Product-order/parameters&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get1&quot;/>&#xa;    &lt;xsl:template name=&quot;SF_query_GET-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:queryAllInput>&#xa;            &lt;query>&#xa;                &lt;fields>&#xa;                    &lt;filter-category>&#xa;                        &lt;xsl:choose>&#xa;                            &lt;xsl:when test=&quot;exists($get1/parameters/tns14:product-order1GetParameters/tns14:category)&quot;>&#xa;                                &lt;xsl:value-of select=&quot;$get1/parameters/tns14:product-order1GetParameters/tns14:category&quot;/>&#xa;                            &lt;/xsl:when>&#xa;                            &lt;xsl:otherwise>&#xa;                                &lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&#xa;                            &lt;/xsl:otherwise>&#xa;                        &lt;/xsl:choose>&#xa;                    &lt;/filter-category>&#xa;                &lt;/fields>&#xa;            &lt;/query>&#xa;        &lt;/tns4:queryAllInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>"
+                                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
                                     inputVariable="SF_query_GET-input"
                                     name="SF_query_GET"
                                     outputVariable="SF_query_GET"
@@ -8826,11 +8940,24 @@
                                     <bpws:target linkName="SalesforceGetSessionGETToSalesforceQueryAll1"/>
                                     </bpws:targets>
                                     <bpws:sources>
-                                    <bpws:source linkName="SF_query_GETToMapper1"/>
+                                    <bpws:source linkName="SF_query_GETToMapper1">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="xsd:boolean(count($SF_query_GET/queryAllResponse/ns5:result/ns5:records))" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[xsd:boolean(count($SF_query_GET/queryAllResponse/ns5:result/ns5:records))]]></bpws:transitionCondition>
+                                    </bpws:source>
+                                    <bpws:source linkName="SF_query_Norecords">
+                                    <tibex:DesignExpression>
+                                    <tibex:expression
+                                    expression="##otherwise##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
+                                    </tibex:DesignExpression>
+                                    <bpws:transitionCondition expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"><![CDATA[##otherwise##]]></bpws:transitionCondition>
+                                    </bpws:source>
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;urn:enterprise.soap.sforce.com_queryAllInput+7a004d6e-f758-40e8-bcca-2eaa9a4d49a1+input&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceQueryAll1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:queryAllInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;urn:enterprise.soap.sforce.com_queryAllInput+7a004d6e-f758-40e8-bcca-2eaa9a4d49a1+input&quot; xmlns:tns14=&quot;http://xmlns.example.com/Product-order/parameters&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get1.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;SF_query_GET-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:queryAllInput>&#xa;            &lt;query>&#xa;                &lt;fields>&#xa;                    &lt;filter-category>&#xa;                        &lt;xsl:choose>&#xa;                            &lt;xsl:when test=&quot;exists($get1.parameters/tns14:category)&quot;>&#xa;                                &lt;xsl:value-of select=&quot;$get1.parameters/tns14:category&quot;/>&#xa;                            &lt;/xsl:when>&#xa;                            &lt;xsl:otherwise>&#xa;                                &lt;xsl:attribute name=&quot;xsi:nil&quot;>true&lt;/xsl:attribute>&#xa;                            &lt;/xsl:otherwise>&#xa;                        &lt;/xsl:choose>&#xa;                    &lt;/filter-category>&#xa;                &lt;/fields>&#xa;            &lt;/query>&#xa;        &lt;/tns4:queryAllInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
@@ -8846,7 +8973,7 @@
                                     bindingName="SOAPReferenceBinding"
                                     partnerLink="Soap"
                                     query="SELECT CreatedById,CreatedDate,Id,IsDeleted,LastActivityDate,LastModifiedById,LastModifiedDate,LastReferencedDate,LastViewedDate,Name,OwnerId,SystemModstamp,cancellationDate__c,category__c,completionDate__c,description__c,discountRate__c,href__c,id__c,notificationContact__c,orderDate__c,price__c,priority__c FROM ProductOrder__c WHERE category__c = ?"
-                                    queryType="Query"
+                                    queryType="QueryAll"
                                     salesforceConnection="salesforceConnProperty"
                                     wsdlPath="/SalesforceResources/eu25_salesforce.com_enterprise.wsdl" xsi:type="bwsalesforce:SalesforceQuery">
 
@@ -8896,6 +9023,29 @@
                                     </tibex:config>
                                 </tibex:activityExtension>
                             </bpws:extensionActivity>
+                            <bpws:empty name="Empty2" tibex:xpdlId="c122dadc-fd91-42ee-9a08-758a410fe048">
+                                <bpws:targets>
+                                    <bpws:target linkName="SF_query_Norecords"/>
+                                </bpws:targets>
+                                <bpws:sources>
+                                    <bpws:source linkName="Empty2ToReply"/>
+                                </bpws:sources>
+                            </bpws:empty>
+                            <bpws:reply faultName="serverFault"
+                                name="NoRecords_Out" operation="get"
+                                partnerLink="product-order1"
+                                portType="ns0:product-order1"
+                                tibex:xpdlId="50aa4cdc-525f-487e-a84e-8c3dbaa26c6e" variable="NoRecords_Out-input">
+                                <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns5="http://xmlns.example.com/20191108105315PLT" xmlns:tns11="http://tns.tibco.com/bw/REST" version="2.0"&gt;&lt;xsl:template name="NoRecords_Out-input" match="/"&gt;&lt;tns5:get5XXFaultMessage1&gt;&lt;serverError&gt;&lt;tns11:server5XXError&gt;&lt;statusCode&gt;&lt;xsl:value-of select="500"/&gt;&lt;/statusCode&gt;&lt;message&gt;&lt;xsl:value-of select="&amp;quot;No records found&amp;quot;"/&gt;&lt;/message&gt;&lt;/tns11:server5XXError&gt;&lt;/serverError&gt;&lt;/tns5:get5XXFaultMessage1&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+                                <tibex:inputBindings>
+                                    <tibex:partBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns5=&quot;http://xmlns.example.com/20191108105315PLT&quot; xmlns:tns11=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;NoRecords_Out-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns11:server5XXError>&#xa;            &lt;statusCode>&#xa;                &lt;xsl:value-of select=&quot;500&quot;/>&#xa;            &lt;/statusCode>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;&amp;quot;No records found&amp;quot;&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns11:server5XXError>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                </tibex:inputBindings>
+                                <bpws:targets>
+                                    <bpws:target linkName="Empty2ToReply"/>
+                                </bpws:targets>
+                            </bpws:reply>
                         </bpws:flow>
                     </bpws:scope>
                 </bpws:onMessage>
@@ -8977,7 +9127,7 @@
                                     </bpws:sources>
                                     <tibex:inputBindings>
                                     <tibex:inputBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns12=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns12:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns14=&quot;urn:enterprise.soap.sforce.com_getSessionInput&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:template name=&quot;SalesforceGetSession1-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns14:getSessionInput/>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                     </tibex:inputBindings>
                                     <tibex:config>
                                     <bwext:BWActivity
