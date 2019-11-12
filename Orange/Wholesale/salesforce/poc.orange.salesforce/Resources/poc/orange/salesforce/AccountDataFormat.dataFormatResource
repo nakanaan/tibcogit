@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:baeb6dba-7c71-41fd-884b-0bad04d407a3="http://ns.tibco.com/bw/palette/dataformat/baeb6dba-7c71-41fd-884b-0bad04d407a3" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_nJZggQUeEeqQjpkCm5ffDg" name="poc.orange.salesforce.AccountDataFormat" type="dataformat:DataFormat">
+  <imports xmi:id="_yblmcAUeEeqQjpkCm5ffDg" importType="http://www.w3.org/2001/XMLSchema" namespace="http://ns.tibco.com/bw/palette/dataformat/baeb6dba-7c71-41fd-884b-0bad04d407a3"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_nJbVsAUeEeqQjpkCm5ffDg" formatType="Delimiter separated" colSeparator=";" colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="baeb6dba-7c71-41fd-884b-0bad04d407a3:root" fieldOffsetsStr="href(0,0)&#xA;name(0,0)&#xA;cancellationDate(0,0)&#xA;category(0,0)&#xA;completionDate(0,0)&#xA;description(0,0)&#xA;notificationContact(0,0)&#xA;orderDate(0,0)&#xA;priority(0,0)&#xA;price(0,0)&#xA;discountRate(0,0)">
+    <fieldOffsets xmi:id="_6HwLcAUfEeqQjpkCm5ffDg" name="href"/>
+    <fieldOffsets xmi:id="_6HwLcQUfEeqQjpkCm5ffDg" name="name"/>
+    <fieldOffsets xmi:id="_6HwLcgUfEeqQjpkCm5ffDg" name="cancellationDate"/>
+    <fieldOffsets xmi:id="_6HwLcwUfEeqQjpkCm5ffDg" name="category"/>
+    <fieldOffsets xmi:id="_6HwLdAUfEeqQjpkCm5ffDg" name="completionDate"/>
+    <fieldOffsets xmi:id="_6HwLdQUfEeqQjpkCm5ffDg" name="description"/>
+    <fieldOffsets xmi:id="_6HwLdgUfEeqQjpkCm5ffDg" name="notificationContact"/>
+    <fieldOffsets xmi:id="_6HwLdwUfEeqQjpkCm5ffDg" name="orderDate"/>
+    <fieldOffsets xmi:id="_6HwLeAUfEeqQjpkCm5ffDg" name="priority"/>
+    <fieldOffsets xmi:id="_6HwLeQUfEeqQjpkCm5ffDg" name="price"/>
+    <fieldOffsets xmi:id="_6HwLegUfEeqQjpkCm5ffDg" name="discountRate"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -83,7 +83,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>APP.ORANGESF.PORT</name>
-			<value>10006</value>
+			<value>10005</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>Integer</type>

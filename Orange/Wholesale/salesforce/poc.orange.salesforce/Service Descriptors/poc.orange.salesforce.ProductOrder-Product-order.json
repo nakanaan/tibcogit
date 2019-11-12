@@ -30,7 +30,8 @@
             "description" : "a product to be returned",
             "schema" : {
               "$ref" : "#/definitions/product"
-            }
+            },
+            "headers" : { }
           },
           "500" : {
             "description" : "Internal Error",
@@ -62,7 +63,8 @@
                 "$ref" : "#/definitions/product",
                 "uniqueItems" : false
               }
-            }
+            },
+            "headers" : { }
           },
           "500" : {
             "description" : "Internal Error",
@@ -122,6 +124,13 @@
             "description" : "a product to be returned",
             "schema" : {
               "$ref" : "#/definitions/product"
+            },
+            "headers" : { }
+          },
+          "400" : {
+            "description" : "Bad Request",
+            "schema" : {
+              "type" : "string"
             }
           },
           "500" : {

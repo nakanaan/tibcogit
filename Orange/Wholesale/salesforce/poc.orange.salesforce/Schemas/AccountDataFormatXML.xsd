@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat/baeb6dba-7c71-41fd-884b-0bad04d407a3" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns.tibco.com/bw/palette/dataformat/baeb6dba-7c71-41fd-884b-0bad04d407a3">
+  <xsd:element name="root" tibex:source="sr.index.dataFormatResource">
+    <xsd:complexType>
+      <xsd:sequence>
+            <xsd:element minOccurs="0" name="href" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="name" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="cancellationDate" type="xsd:dateTime"/>
+            <xsd:element minOccurs="0" name="category" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="completionDate" type="xsd:dateTime"/>
+            <xsd:element minOccurs="0" name="description" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="notificationContact" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="orderDate" type="xsd:dateTime"/>
+            <xsd:element minOccurs="0" name="priority" type="xsd:string"/>
+            <xsd:element minOccurs="0" name="price" type="xsd:decimal"/>
+            <xsd:element minOccurs="0" name="discountRate" type="xsd:decimal"/>
+        </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
