@@ -1201,7 +1201,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="461" width="1357" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="343" width="1173" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1296,6 +1296,13 @@
             name="RenderJSON" sca-bpel:internal="true"/>
         <bpws:variable element="ns9:ActivityErrorData"
             name="_error_RenderJSON" sca-bpel:internal="true"/>
+        <bpws:variable name="Property" sca-bpel:hotUpdate="false"
+            sca-bpel:privateProperty="true" sca-bpel:property="yes"
+            sca-bpel:sharedResourceType="{http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient}HttpClientConfiguration" type="xsd:string">
+            <bpws:from>
+                <bpws:literal>poc.orange.salesforce.sfConnectionLocalhost</bpws:literal>
+            </bpws:from>
+        </bpws:variable>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -1378,7 +1385,6 @@
                 </tibex:activityExtension>
             </bpws:extensionActivity>
             <bpws:scope name="Iterate" tibex:group="iterate"
-                tibex:indexOriginalName="index"
                 tibex:indexToGlobal="false" tibex:xpdlId="edf8ce1c-fa89-4b84-a4ed-f7a3995765f8">
                 <bpws:targets>
                     <bpws:target linkName="ParseDataToIterate"/>
@@ -1443,7 +1449,7 @@
                                     name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/restjson#//RestInvokeActivity"/>
                                     <value
-                                    httpClientSR="httpClientResource"
+                                    httpClientSR="Property"
                                     httpMethod="PUT"
                                     requestContentType="JSON"
                                     resourcePath="/product-order"
@@ -1481,7 +1487,7 @@
                                     name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/restjson#//JsonRender"/>
                                     <value
-                                    jsonOutputStyle="Anonymous Array"
+                                    jsonOutputStyle="None"
                                     schemaType="Xsd" xsi:type="restjson:JsonRender">
 
                                     <inputEditorElement href="platform:/resource/poc.orange.salesforce/Schemas/Orange%20Salesforce%20API_1.0.xsd#//productNoID;XSDElementDeclaration=1"/>

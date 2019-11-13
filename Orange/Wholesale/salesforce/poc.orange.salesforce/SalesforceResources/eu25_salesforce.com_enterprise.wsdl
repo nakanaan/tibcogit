@@ -25,7 +25,7 @@ All Rights Reserved
             <complexType name="sObject">
                 <sequence>
                     <element name="fieldsToNull"       type="xsd:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-                    <element name="Id"                 type="tns:ID" nillable="true" />
+                    <element name="Id"                 type="tns:ID" nillable="true" minOccurs="0"/>
                 </sequence>
             </complexType>
 
