@@ -67,7 +67,4 @@
       <sca:interface.wsdl xmi:id="_YC8I4AIXEeq0z-CMprxL8A" interface="http://xmlns.example.com/20191108105315PLT#wsdl.interface(product-order1)"/>
     </sca:service>
   </sca:component>
-  <sca:component xmi:id="_aio0UAUeEeqQjpkCm5ffDg" name="ComponentfileHandler" compositeext:version="1.0.0.qualifier">
-    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_aio0UQUeEeqQjpkCm5ffDg" processName="poc.orange.salesforce.filemgmt.fileHandler"/>
-  </sca:component>
 </sca:composite>
